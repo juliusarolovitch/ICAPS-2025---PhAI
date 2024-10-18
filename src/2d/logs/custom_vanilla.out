@@ -1,0 +1,149 @@
+Using device: cuda
+Loaded normalization values from /home/julius/Desktop/icra_phai/src/2d/normalization_values/vanilla_normalization_values.pkl
+Loaded dataset from /home/julius/Desktop/icra_phai/src/2d/datasets/vanilla_dataset.pkl
+Training samples: 4429684, Validation samples: 1107422
+Calculated input size for MLP: 520
+Training MLPModel with learning type: priority
+Training model with loss function: custom
+Training Epochs:   0%|          | 0/40 [00:00<?, ?it/s]/home/julius/.local/lib/python3.8/site-packages/torch/autograd/graph.py:769: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at ../aten/src/ATen/cuda/CublasHandlePool.cpp:135.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Training Epochs:   2%|▎         | 1/40 [12:31<8:08:32, 751.60s/it]Epoch: 1/40, Train Loss: 0.106818, MSE Loss: 0.006356, Grad1 Loss: 0.007861, Grad2 Loss: 0.001375, Grad4 Loss: 2.000000, Val Loss: 0.003294, LR: 0.001
+    Current Lambdas: lambda1=0.0500, lambda2=0.0500, lambda3=0.0500
+Model saved at models_custom_05_8_vanilla/model_epoch_1.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:   5%|▌         | 2/40 [25:17<8:01:13, 759.83s/it]Epoch: 2/40, Train Loss: 0.105628, MSE Loss: 0.004324, Grad1 Loss: 0.005256, Grad2 Loss: 0.001033, Grad4 Loss: 2.000000, Val Loss: 0.002959, LR: 0.001
+    Current Lambdas: lambda1=0.0505, lambda2=0.0505, lambda3=0.0505
+Model saved at models_custom_05_8_vanilla/model_epoch_2.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:   8%|▊         | 3/40 [37:48<7:46:15, 756.09s/it]Epoch: 3/40, Train Loss: 0.108434, MSE Loss: 0.004111, Grad1 Loss: 0.006079, Grad2 Loss: 0.001214, Grad4 Loss: 2.000000, Val Loss: 0.002511, LR: 0.001
+    Current Lambdas: lambda1=0.0520, lambda2=0.0520, lambda3=0.0520
+Model saved at models_custom_05_8_vanilla/model_epoch_3.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  10%|█         | 4/40 [50:19<7:32:17, 753.82s/it]Epoch: 4/40, Train Loss: 0.113259, MSE Loss: 0.003998, Grad1 Loss: 0.005811, Grad2 Loss: 0.001207, Grad4 Loss: 2.000060, Val Loss: 0.002282, LR: 0.001
+    Current Lambdas: lambda1=0.0544, lambda2=0.0544, lambda3=0.0544
+Model saved at models_custom_05_8_vanilla/model_epoch_4.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  12%|█▎        | 5/40 [1:02:55<7:20:12, 754.65s/it]Epoch: 5/40, Train Loss: 0.119561, MSE Loss: 0.003715, Grad1 Loss: 0.000897, Grad2 Loss: 0.000192, Grad4 Loss: 2.000068, Val Loss: 0.002122, LR: 0.001
+    Current Lambdas: lambda1=0.0579, lambda2=0.0579, lambda3=0.0579
+Model saved at models_custom_05_8_vanilla/model_epoch_5.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  15%|█▌        | 6/40 [1:15:24<7:06:39, 752.92s/it]Epoch: 6/40, Train Loss: 0.128323, MSE Loss: 0.003583, Grad1 Loss: 0.000962, Grad2 Loss: 0.000205, Grad4 Loss: 2.000189, Val Loss: 0.001972, LR: 0.001
+    Current Lambdas: lambda1=0.0623, lambda2=0.0623, lambda3=0.0623
+Model saved at models_custom_05_8_vanilla/model_epoch_6.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  18%|█▊        | 7/40 [1:28:02<6:55:01, 754.59s/it]Epoch: 7/40, Train Loss: 0.139122, MSE Loss: 0.003508, Grad1 Loss: 0.001095, Grad2 Loss: 0.000229, Grad4 Loss: 2.000325, Val Loss: 0.001913, LR: 0.001
+    Current Lambdas: lambda1=0.0678, lambda2=0.0678, lambda3=0.0678
+Model saved at models_custom_05_8_vanilla/model_epoch_7.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  20%|██        | 8/40 [1:39:47<6:33:56, 738.65s/it]Epoch: 8/40, Train Loss: 0.151908, MSE Loss: 0.003456, Grad1 Loss: 0.001099, Grad2 Loss: 0.000220, Grad4 Loss: 2.000404, Val Loss: 0.001924, LR: 0.001
+    Current Lambdas: lambda1=0.0742, lambda2=0.0742, lambda3=0.0742
+Model saved at models_custom_05_8_vanilla/model_epoch_8.pth
+Training Epochs:  22%|██▎       | 9/40 [1:51:08<6:12:16, 720.53s/it]Epoch: 9/40, Train Loss: 0.166640, MSE Loss: 0.003400, Grad1 Loss: 0.000868, Grad2 Loss: 0.000176, Grad4 Loss: 2.000466, Val Loss: 0.001738, LR: 0.001
+    Current Lambdas: lambda1=0.0816, lambda2=0.0816, lambda3=0.0816
+Model saved at models_custom_05_8_vanilla/model_epoch_9.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  25%|██▌       | 10/40 [2:02:30<5:54:26, 708.87s/it]Epoch: 10/40, Train Loss: 0.183252, MSE Loss: 0.003301, Grad1 Loss: 0.000453, Grad2 Loss: 0.000095, Grad4 Loss: 2.000221, Val Loss: 0.001647, LR: 0.001
+    Current Lambdas: lambda1=0.0899, lambda2=0.0899, lambda3=0.0899
+Model saved at models_custom_05_8_vanilla/model_epoch_10.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  28%|██▊       | 11/40 [2:13:52<5:38:33, 700.46s/it]Epoch: 11/40, Train Loss: 0.201960, MSE Loss: 0.003251, Grad1 Loss: 0.000549, Grad2 Loss: 0.000115, Grad4 Loss: 2.000247, Val Loss: 0.001614, LR: 0.001
+    Current Lambdas: lambda1=0.0993, lambda2=0.0993, lambda3=0.0993
+Model saved at models_custom_05_8_vanilla/model_epoch_11.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  30%|███       | 12/40 [2:25:17<5:24:42, 695.81s/it]Epoch: 12/40, Train Loss: 0.222672, MSE Loss: 0.003214, Grad1 Loss: 0.000709, Grad2 Loss: 0.000156, Grad4 Loss: 2.000303, Val Loss: 0.001709, LR: 0.001
+    Current Lambdas: lambda1=0.1097, lambda2=0.1097, lambda3=0.1097
+Model saved at models_custom_05_8_vanilla/model_epoch_12.pth
+Training Epochs:  32%|███▎      | 13/40 [2:36:41<5:11:29, 692.19s/it]Epoch: 13/40, Train Loss: 0.245350, MSE Loss: 0.003184, Grad1 Loss: 0.000738, Grad2 Loss: 0.000158, Grad4 Loss: 2.000376, Val Loss: 0.001615, LR: 0.001
+    Current Lambdas: lambda1=0.1210, lambda2=0.1210, lambda3=0.1210
+Model saved at models_custom_05_8_vanilla/model_epoch_13.pth
+Training Epochs:  35%|███▌      | 14/40 [2:48:02<4:58:29, 688.82s/it]Epoch: 14/40, Train Loss: 0.270035, MSE Loss: 0.003174, Grad1 Loss: 0.000834, Grad2 Loss: 0.000188, Grad4 Loss: 2.000430, Val Loss: 0.001802, LR: 0.001
+    Current Lambdas: lambda1=0.1333, lambda2=0.1333, lambda3=0.1333
+Model saved at models_custom_05_8_vanilla/model_epoch_14.pth
+Training Epochs:  38%|███▊      | 15/40 [2:59:18<4:45:23, 684.92s/it]Epoch: 15/40, Train Loss: 0.296692, MSE Loss: 0.003170, Grad1 Loss: 0.000894, Grad2 Loss: 0.000196, Grad4 Loss: 2.000463, Val Loss: 0.001625, LR: 0.001
+    Current Lambdas: lambda1=0.1466, lambda2=0.1466, lambda3=0.1466
+Model saved at models_custom_05_8_vanilla/model_epoch_15.pth
+Training Epochs:  40%|████      | 16/40 [3:10:42<4:33:50, 684.62s/it]Epoch: 16/40, Train Loss: 0.325333, MSE Loss: 0.003176, Grad1 Loss: 0.000938, Grad2 Loss: 0.000205, Grad4 Loss: 2.000495, Val Loss: 0.001323, LR: 0.001
+    Current Lambdas: lambda1=0.1609, lambda2=0.1609, lambda3=0.1609
+Model saved at models_custom_05_8_vanilla/model_epoch_16.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  42%|████▎     | 17/40 [3:22:01<4:21:52, 683.15s/it]Epoch: 17/40, Train Loss: 0.355995, MSE Loss: 0.003200, Grad1 Loss: 0.001059, Grad2 Loss: 0.000238, Grad4 Loss: 2.000571, Val Loss: 0.001742, LR: 0.001
+    Current Lambdas: lambda1=0.1762, lambda2=0.1762, lambda3=0.1762
+Model saved at models_custom_05_8_vanilla/model_epoch_17.pth
+Training Epochs:  45%|████▌     | 18/40 [3:33:09<4:08:48, 678.58s/it]Epoch: 18/40, Train Loss: 0.388606, MSE Loss: 0.003202, Grad1 Loss: 0.001139, Grad2 Loss: 0.000250, Grad4 Loss: 2.000659, Val Loss: 0.001721, LR: 0.001
+    Current Lambdas: lambda1=0.1925, lambda2=0.1925, lambda3=0.1925
+Model saved at models_custom_05_8_vanilla/model_epoch_18.pth
+Training Epochs:  48%|████▊     | 19/40 [3:44:26<3:57:15, 677.90s/it]Epoch: 19/40, Train Loss: 0.423140, MSE Loss: 0.003204, Grad1 Loss: 0.001079, Grad2 Loss: 0.000228, Grad4 Loss: 2.000644, Val Loss: 0.001585, LR: 0.001
+    Current Lambdas: lambda1=0.2098, lambda2=0.2098, lambda3=0.2098
+Model saved at models_custom_05_8_vanilla/model_epoch_19.pth
+Training Epochs:  50%|█████     | 20/40 [3:55:43<3:45:53, 677.67s/it]Epoch: 20/40, Train Loss: 0.459637, MSE Loss: 0.003186, Grad1 Loss: 0.001022, Grad2 Loss: 0.000213, Grad4 Loss: 2.000672, Val Loss: 0.001680, LR: 0.001
+    Current Lambdas: lambda1=0.2280, lambda2=0.2280, lambda3=0.2280
+Model saved at models_custom_05_8_vanilla/model_epoch_20.pth
+Training Epochs:  52%|█████▎    | 21/40 [4:06:57<3:34:13, 676.53s/it]Epoch: 21/40, Train Loss: 0.498023, MSE Loss: 0.003138, Grad1 Loss: 0.000870, Grad2 Loss: 0.000179, Grad4 Loss: 2.000602, Val Loss: 0.001635, LR: 0.001
+    Current Lambdas: lambda1=0.2472, lambda2=0.2472, lambda3=0.2472
+Model saved at models_custom_05_8_vanilla/model_epoch_21.pth
+Training Epochs:  55%|█████▌    | 22/40 [4:18:15<3:23:04, 676.94s/it]Epoch: 22/40, Train Loss: 0.538320, MSE Loss: 0.003082, Grad1 Loss: 0.000623, Grad2 Loss: 0.000123, Grad4 Loss: 2.000477, Val Loss: 0.001451, LR: 0.001
+    Current Lambdas: lambda1=0.2675, lambda2=0.2675, lambda3=0.2675
+Model saved at models_custom_05_8_vanilla/model_epoch_22.pth
+Training Epochs:  57%|█████▊    | 23/40 [4:29:33<3:11:55, 677.39s/it]Epoch: 23/40, Train Loss: 0.580449, MSE Loss: 0.002918, Grad1 Loss: 0.000367, Grad2 Loss: 0.000075, Grad4 Loss: 2.000295, Val Loss: 0.001287, LR: 0.0005
+    Current Lambdas: lambda1=0.2887, lambda2=0.2887, lambda3=0.2887
+Model saved at models_custom_05_8_vanilla/model_epoch_23.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  60%|██████    | 24/40 [4:40:54<3:00:57, 678.57s/it]Epoch: 24/40, Train Loss: 0.624819, MSE Loss: 0.002903, Grad1 Loss: 0.000353, Grad2 Loss: 0.000066, Grad4 Loss: 2.000286, Val Loss: 0.001487, LR: 0.0005
+    Current Lambdas: lambda1=0.3108, lambda2=0.3108, lambda3=0.3108
+Model saved at models_custom_05_8_vanilla/model_epoch_24.pth
+Training Epochs:  62%|██████▎   | 25/40 [4:52:15<2:49:49, 679.27s/it]Epoch: 25/40, Train Loss: 0.671176, MSE Loss: 0.002907, Grad1 Loss: 0.000333, Grad2 Loss: 0.000063, Grad4 Loss: 2.000267, Val Loss: 0.001389, LR: 0.0005
+    Current Lambdas: lambda1=0.3340, lambda2=0.3340, lambda3=0.3340
+Model saved at models_custom_05_8_vanilla/model_epoch_25.pth
+Training Epochs:  65%|██████▌   | 26/40 [5:03:38<2:38:43, 680.27s/it]Epoch: 26/40, Train Loss: 0.719334, MSE Loss: 0.002868, Grad1 Loss: 0.000135, Grad2 Loss: 0.000024, Grad4 Loss: 2.000106, Val Loss: 0.001284, LR: 0.0005
+    Current Lambdas: lambda1=0.3582, lambda2=0.3582, lambda3=0.3582
+Model saved at models_custom_05_8_vanilla/model_epoch_26.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  68%|██████▊   | 27/40 [5:15:00<2:27:32, 680.93s/it]Epoch: 27/40, Train Loss: 0.769775, MSE Loss: 0.002872, Grad1 Loss: 0.000308, Grad2 Loss: 0.000059, Grad4 Loss: 2.000250, Val Loss: 0.001590, LR: 0.0005
+    Current Lambdas: lambda1=0.3833, lambda2=0.3833, lambda3=0.3833
+Model saved at models_custom_05_8_vanilla/model_epoch_27.pth
+Training Epochs:  70%|███████   | 28/40 [5:26:19<2:16:03, 680.33s/it]Epoch: 28/40, Train Loss: 0.822014, MSE Loss: 0.002853, Grad1 Loss: 0.000278, Grad2 Loss: 0.000048, Grad4 Loss: 2.000228, Val Loss: 0.001285, LR: 0.0005
+    Current Lambdas: lambda1=0.4095, lambda2=0.4095, lambda3=0.4095
+Model saved at models_custom_05_8_vanilla/model_epoch_28.pth
+Training Epochs:  72%|███████▎  | 29/40 [5:37:42<2:04:52, 681.10s/it]Epoch: 29/40, Train Loss: 0.876214, MSE Loss: 0.002841, Grad1 Loss: 0.000224, Grad2 Loss: 0.000042, Grad4 Loss: 2.000185, Val Loss: 0.001346, LR: 0.0005
+    Current Lambdas: lambda1=0.4366, lambda2=0.4366, lambda3=0.4366
+Model saved at models_custom_05_8_vanilla/model_epoch_29.pth
+Training Epochs:  75%|███████▌  | 30/40 [5:49:11<1:53:53, 683.32s/it]Epoch: 30/40, Train Loss: 0.932470, MSE Loss: 0.002842, Grad1 Loss: 0.000258, Grad2 Loss: 0.000047, Grad4 Loss: 2.000210, Val Loss: 0.001349, LR: 0.0005
+    Current Lambdas: lambda1=0.4647, lambda2=0.4647, lambda3=0.4647
+Model saved at models_custom_05_8_vanilla/model_epoch_30.pth
+Training Epochs:  78%|███████▊  | 31/40 [6:00:31<1:42:20, 682.33s/it]Epoch: 31/40, Train Loss: 0.990703, MSE Loss: 0.002833, Grad1 Loss: 0.000297, Grad2 Loss: 0.000057, Grad4 Loss: 2.000244, Val Loss: 0.001515, LR: 0.0005
+    Current Lambdas: lambda1=0.4938, lambda2=0.4938, lambda3=0.4938
+Model saved at models_custom_05_8_vanilla/model_epoch_31.pth
+Training Epochs:  80%|████████  | 32/40 [6:11:54<1:31:01, 682.70s/it]Epoch: 32/40, Train Loss: 1.050784, MSE Loss: 0.002829, Grad1 Loss: 0.000214, Grad2 Loss: 0.000042, Grad4 Loss: 2.000171, Val Loss: 0.001383, LR: 0.0005
+    Current Lambdas: lambda1=0.5239, lambda2=0.5239, lambda3=0.5239
+Model saved at models_custom_05_8_vanilla/model_epoch_32.pth
+Training Epochs:  82%|████████▎ | 33/40 [6:23:11<1:19:25, 680.81s/it]Epoch: 33/40, Train Loss: 1.112912, MSE Loss: 0.002776, Grad1 Loss: 0.000251, Grad2 Loss: 0.000042, Grad4 Loss: 2.000201, Val Loss: 0.001264, LR: 0.00025
+    Current Lambdas: lambda1=0.5549, lambda2=0.5549, lambda3=0.5549
+Model saved at models_custom_05_8_vanilla/model_epoch_33.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  85%|████████▌ | 34/40 [6:34:29<1:08:00, 680.03s/it]Epoch: 34/40, Train Loss: 1.177164, MSE Loss: 0.002758, Grad1 Loss: 0.000379, Grad2 Loss: 0.000066, Grad4 Loss: 2.000306, Val Loss: 0.001390, LR: 0.00025
+    Current Lambdas: lambda1=0.5870, lambda2=0.5870, lambda3=0.5870
+Model saved at models_custom_05_8_vanilla/model_epoch_34.pth
+Training Epochs:  88%|████████▊ | 35/40 [6:45:58<56:53, 682.65s/it]  Epoch: 35/40, Train Loss: 1.243211, MSE Loss: 0.002756, Grad1 Loss: 0.000336, Grad2 Loss: 0.000059, Grad4 Loss: 2.000276, Val Loss: 0.001323, LR: 0.00025
+    Current Lambdas: lambda1=0.6200, lambda2=0.6200, lambda3=0.6200
+Model saved at models_custom_05_8_vanilla/model_epoch_35.pth
+Training Epochs:  90%|█████████ | 36/40 [6:57:19<45:29, 682.43s/it]Epoch: 36/40, Train Loss: 1.311277, MSE Loss: 0.002756, Grad1 Loss: 0.000333, Grad2 Loss: 0.000058, Grad4 Loss: 2.000274, Val Loss: 0.001258, LR: 0.00025
+    Current Lambdas: lambda1=0.6540, lambda2=0.6540, lambda3=0.6540
+Model saved at models_custom_05_8_vanilla/model_epoch_36.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  92%|█████████▎| 37/40 [7:08:39<34:04, 681.55s/it]Epoch: 37/40, Train Loss: 1.381483, MSE Loss: 0.002750, Grad1 Loss: 0.000453, Grad2 Loss: 0.000083, Grad4 Loss: 2.000374, Val Loss: 0.001233, LR: 0.00025
+    Current Lambdas: lambda1=0.6891, lambda2=0.6891, lambda3=0.6891
+Model saved at models_custom_05_8_vanilla/model_epoch_37.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs:  95%|█████████▌| 38/40 [7:19:50<22:37, 678.52s/it]Epoch: 38/40, Train Loss: 1.453122, MSE Loss: 0.002739, Grad1 Loss: 0.000195, Grad2 Loss: 0.000033, Grad4 Loss: 2.000164, Val Loss: 0.001268, LR: 0.00025
+    Current Lambdas: lambda1=0.7250, lambda2=0.7250, lambda3=0.7250
+Model saved at models_custom_05_8_vanilla/model_epoch_38.pth
+Training Epochs:  98%|█████████▊| 39/40 [7:31:07<11:17, 677.84s/it]Epoch: 39/40, Train Loss: 1.527530, MSE Loss: 0.002754, Grad1 Loss: 0.000465, Grad2 Loss: 0.000084, Grad4 Loss: 2.000386, Val Loss: 0.001082, LR: 0.00025
+    Current Lambdas: lambda1=0.7620, lambda2=0.7620, lambda3=0.7620
+Model saved at models_custom_05_8_vanilla/model_epoch_39.pth
+Best model saved to vanilla_05_8_custom.pth
+Training Epochs: 100%|██████████| 40/40 [7:42:28<00:00, 678.92s/it]Training Epochs: 100%|██████████| 40/40 [7:42:28<00:00, 693.71s/it]
+Epoch: 40/40, Train Loss: 1.603439, MSE Loss: 0.002741, Grad1 Loss: 0.000440, Grad2 Loss: 0.000076, Grad4 Loss: 2.000356, Val Loss: 0.001311, LR: 0.00025
+    Current Lambdas: lambda1=0.8000, lambda2=0.8000, lambda3=0.8000
+Model saved at models_custom_05_8_vanilla/model_epoch_40.pth
+Best validation loss: 0.001082
+Training completed. Best model saved as vanilla_05_8_custom.pth

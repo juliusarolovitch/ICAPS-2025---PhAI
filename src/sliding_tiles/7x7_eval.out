@@ -1,0 +1,2007 @@
+Using device: cuda
+Running experiments for 48-tile puzzles.
+
+Attempt 1 for puzzle 1/50
+Running Traditional A* to check expansion criteria
+Expanded 211 nodes, cost is 42
+Expansion count 211 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 2 for puzzle 1/50
+Running Traditional A* to check expansion criteria
+Expanded 3203 nodes, cost is 39
+Expansion count 3203 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 3 for puzzle 1/50
+Running Traditional A* to check expansion criteria
+Expanded 76949 nodes, cost is 46
+Expansion count 76949 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 4 for puzzle 1/50
+Running Traditional A* to check expansion criteria
+Expanded 269 nodes, cost is 29
+Expansion count 269 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 5 for puzzle 1/50
+Running Traditional A* to check expansion criteria
+Expanded 29 nodes, cost is 27
+Expansion count 29 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 6 for puzzle 1/50
+Running Traditional A* to check expansion criteria
+Expanded 221093 nodes, cost is 50
+Expansion count 221093 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 7 for puzzle 1/50
+Running Traditional A* to check expansion criteria
+Expanded 16834 nodes, cost is 46
+Puzzle 1 accepted.
+Running Weighted A* with weight 3.0
+Expanded 142023 nodes, cost is 74
+Running Potential Search
+Expanded 12036 nodes, cost is 100
+Running Optimistic Search with weight 3.0
+Expanded 16517 nodes, cost is 46
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 22159 nodes, cost is 52
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 33795 nodes, cost is 52
+Running A* with model 7x7_mse
+Expanded 23531 nodes, cost is 46
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 23476 nodes, cost is 46
+Running A* with model 7x7_custom
+Expanded 22863 nodes, cost is 46
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 22797 nodes, cost is 46
+
+Attempt 8 for puzzle 2/50
+Running Traditional A* to check expansion criteria
+Expanded 231837 nodes, cost is 52
+Expansion count 231837 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 9 for puzzle 2/50
+Running Traditional A* to check expansion criteria
+Expanded 10618 nodes, cost is 46
+Puzzle 2 accepted.
+Running Weighted A* with weight 3.0
+Expanded 515 nodes, cost is 62
+Running Potential Search
+Expanded 2402 nodes, cost is 56
+Running Optimistic Search with weight 3.0
+Expanded 10091 nodes, cost is 46
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 361 nodes, cost is 52
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 337 nodes, cost is 52
+Running A* with model 7x7_mse
+Expanded 14842 nodes, cost is 46
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 14757 nodes, cost is 46
+Running A* with model 7x7_custom
+Expanded 10465 nodes, cost is 46
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 10394 nodes, cost is 46
+
+Attempt 10 for puzzle 3/50
+Running Traditional A* to check expansion criteria
+Expanded 1318 nodes, cost is 35
+Expansion count 1318 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 11 for puzzle 3/50
+Running Traditional A* to check expansion criteria
+Expanded 1971 nodes, cost is 46
+Expansion count 1971 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 12 for puzzle 3/50
+Running Traditional A* to check expansion criteria
+Expanded 64990 nodes, cost is 50
+Expansion count 64990 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 13 for puzzle 3/50
+Running Traditional A* to check expansion criteria
+Expanded 839 nodes, cost is 36
+Expansion count 839 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 14 for puzzle 3/50
+Running Traditional A* to check expansion criteria
+Expanded 779 nodes, cost is 36
+Expansion count 779 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 15 for puzzle 3/50
+Running Traditional A* to check expansion criteria
+Expanded 42494 nodes, cost is 46
+Expansion count 42494 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 16 for puzzle 3/50
+Running Traditional A* to check expansion criteria
+Expanded 122148 nodes, cost is 43
+Expansion count 122148 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 17 for puzzle 3/50
+Running Traditional A* to check expansion criteria
+Expanded 308 nodes, cost is 36
+Expansion count 308 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 18 for puzzle 3/50
+Running Traditional A* to check expansion criteria
+Expanded 2242 nodes, cost is 42
+Expansion count 2242 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 19 for puzzle 3/50
+Running Traditional A* to check expansion criteria
+Expanded 17934 nodes, cost is 41
+Puzzle 3 accepted.
+Running Weighted A* with weight 3.0
+Expanded 28128 nodes, cost is 61
+Running Potential Search
+Expanded 2956 nodes, cost is 85
+Running Optimistic Search with weight 3.0
+Expanded 17387 nodes, cost is 41
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 41432 nodes, cost is 51
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 41430 nodes, cost is 51
+Running A* with model 7x7_mse
+Expanded 9276 nodes, cost is 41
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 9248 nodes, cost is 41
+Running A* with model 7x7_custom
+Expanded 14885 nodes, cost is 41
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 14834 nodes, cost is 41
+
+Attempt 20 for puzzle 4/50
+Running Traditional A* to check expansion criteria
+Expanded 1683145 nodes, cost is None
+Expansion count 1683145 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 21 for puzzle 4/50
+Running Traditional A* to check expansion criteria
+Expanded 24 nodes, cost is 16
+Expansion count 24 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 22 for puzzle 4/50
+Running Traditional A* to check expansion criteria
+Expanded 92 nodes, cost is 23
+Expansion count 92 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 23 for puzzle 4/50
+Running Traditional A* to check expansion criteria
+Expanded 2092 nodes, cost is 36
+Expansion count 2092 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 24 for puzzle 4/50
+Running Traditional A* to check expansion criteria
+Expanded 33029 nodes, cost is 37
+Expansion count 33029 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 25 for puzzle 4/50
+Running Traditional A* to check expansion criteria
+Expanded 2040 nodes, cost is 38
+Expansion count 2040 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 26 for puzzle 4/50
+Running Traditional A* to check expansion criteria
+Expanded 246 nodes, cost is 45
+Expansion count 246 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 27 for puzzle 4/50
+Running Traditional A* to check expansion criteria
+Expanded 1802 nodes, cost is 56
+Expansion count 1802 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 28 for puzzle 4/50
+Running Traditional A* to check expansion criteria
+Expanded 7019 nodes, cost is 34
+Puzzle 4 accepted.
+Running Weighted A* with weight 3.0
+Expanded 166 nodes, cost is 38
+Running Potential Search
+Expanded 321 nodes, cost is 60
+Running Optimistic Search with weight 3.0
+Expanded 6985 nodes, cost is 34
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 602 nodes, cost is 38
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 602 nodes, cost is 38
+Running A* with model 7x7_mse
+Expanded 8201 nodes, cost is 34
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 8161 nodes, cost is 34
+Running A* with model 7x7_custom
+Expanded 6252 nodes, cost is 34
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 6206 nodes, cost is 34
+
+Attempt 29 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 25 nodes, cost is 22
+Expansion count 25 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 30 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 135 nodes, cost is 32
+Expansion count 135 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 31 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 995835 nodes, cost is 68
+Expansion count 995835 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 32 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 176554 nodes, cost is 48
+Expansion count 176554 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 33 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 30475 nodes, cost is 60
+Expansion count 30475 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 34 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 466 nodes, cost is 53
+Expansion count 466 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 35 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 1051506 nodes, cost is 62
+Expansion count 1051506 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 36 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 116625 nodes, cost is 54
+Expansion count 116625 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 37 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 105455 nodes, cost is 55
+Expansion count 105455 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 38 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 110 nodes, cost is 28
+Expansion count 110 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 39 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 204 nodes, cost is 38
+Expansion count 204 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 40 for puzzle 5/50
+Running Traditional A* to check expansion criteria
+Expanded 16118 nodes, cost is 48
+Puzzle 5 accepted.
+Running Weighted A* with weight 3.0
+Expanded 940 nodes, cost is 66
+Running Potential Search
+Expanded 736 nodes, cost is 68
+Running Optimistic Search with weight 3.0
+Expanded 20455 nodes, cost is 48
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 217 nodes, cost is 48
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 222 nodes, cost is 48
+Running A* with model 7x7_mse
+Expanded 12201 nodes, cost is 48
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 12026 nodes, cost is 48
+Running A* with model 7x7_custom
+Expanded 8890 nodes, cost is 48
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 8745 nodes, cost is 48
+
+Attempt 41 for puzzle 6/50
+Running Traditional A* to check expansion criteria
+Expanded 12624 nodes, cost is 55
+Puzzle 6 accepted.
+Running Weighted A* with weight 3.0
+Expanded 755593 nodes, cost is 101
+Running Potential Search
+Expanded 3827 nodes, cost is 127
+Running Optimistic Search with weight 3.0
+Expanded 12909 nodes, cost is 55
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1734 nodes, cost is 67
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 1586 nodes, cost is 71
+Running A* with model 7x7_mse
+Expanded 8962 nodes, cost is 55
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 8923 nodes, cost is 55
+Running A* with model 7x7_custom
+Expanded 4806 nodes, cost is 55
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 4788 nodes, cost is 55
+
+Attempt 42 for puzzle 7/50
+Running Traditional A* to check expansion criteria
+Expanded 236 nodes, cost is 36
+Expansion count 236 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 43 for puzzle 7/50
+Running Traditional A* to check expansion criteria
+Expanded 5819 nodes, cost is 45
+Puzzle 7 accepted.
+Running Weighted A* with weight 3.0
+Expanded 1666 nodes, cost is 63
+Running Potential Search
+Expanded 2417 nodes, cost is 101
+Running Optimistic Search with weight 3.0
+Expanded 4867 nodes, cost is 45
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1246 nodes, cost is 51
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 844 nodes, cost is 51
+Running A* with model 7x7_mse
+Expanded 4350 nodes, cost is 45
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 4335 nodes, cost is 45
+Running A* with model 7x7_custom
+Expanded 2449 nodes, cost is 45
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 2442 nodes, cost is 45
+
+Attempt 44 for puzzle 8/50
+Running Traditional A* to check expansion criteria
+Expanded 39849 nodes, cost is 55
+Expansion count 39849 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 45 for puzzle 8/50
+Running Traditional A* to check expansion criteria
+Expanded 44317 nodes, cost is 56
+Expansion count 44317 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 46 for puzzle 8/50
+Running Traditional A* to check expansion criteria
+Expanded 95 nodes, cost is 29
+Expansion count 95 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 47 for puzzle 8/50
+Running Traditional A* to check expansion criteria
+Expanded 1865 nodes, cost is 48
+Expansion count 1865 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 48 for puzzle 8/50
+Running Traditional A* to check expansion criteria
+Expanded 2417 nodes, cost is 53
+Expansion count 2417 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 49 for puzzle 8/50
+Running Traditional A* to check expansion criteria
+Expanded 2453 nodes, cost is 39
+Expansion count 2453 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 50 for puzzle 8/50
+Running Traditional A* to check expansion criteria
+Expanded 1432 nodes, cost is 41
+Expansion count 1432 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 51 for puzzle 8/50
+Running Traditional A* to check expansion criteria
+Expanded 606626 nodes, cost is 50
+Expansion count 606626 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 52 for puzzle 8/50
+Running Traditional A* to check expansion criteria
+Expanded 3855 nodes, cost is 34
+Expansion count 3855 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 53 for puzzle 8/50
+Running Traditional A* to check expansion criteria
+Expanded 237 nodes, cost is 28
+Expansion count 237 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 54 for puzzle 8/50
+Running Traditional A* to check expansion criteria
+Expanded 6950 nodes, cost is 38
+Puzzle 8 accepted.
+Running Weighted A* with weight 3.0
+Expanded 645 nodes, cost is 58
+Running Potential Search
+Expanded 815 nodes, cost is 94
+Running Optimistic Search with weight 3.0
+Expanded 6739 nodes, cost is 38
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1581 nodes, cost is 46
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 926 nodes, cost is 58
+Running A* with model 7x7_mse
+Expanded 23089 nodes, cost is 40
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 22940 nodes, cost is 40
+Running A* with model 7x7_custom
+Expanded 11046 nodes, cost is 40
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 10961 nodes, cost is 40
+
+Attempt 55 for puzzle 9/50
+Running Traditional A* to check expansion criteria
+Expanded 31979 nodes, cost is 46
+Expansion count 31979 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 56 for puzzle 9/50
+Running Traditional A* to check expansion criteria
+Expanded 17261 nodes, cost is 42
+Puzzle 9 accepted.
+Running Weighted A* with weight 3.0
+Expanded 984 nodes, cost is 54
+Running Potential Search
+Expanded 1610 nodes, cost is 62
+Running Optimistic Search with weight 3.0
+Expanded 14505 nodes, cost is 42
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1189 nodes, cost is 42
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 1246 nodes, cost is 42
+Running A* with model 7x7_mse
+Expanded 15483 nodes, cost is 42
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 15379 nodes, cost is 42
+Running A* with model 7x7_custom
+Expanded 9262 nodes, cost is 42
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 9178 nodes, cost is 42
+
+Attempt 57 for puzzle 10/50
+Running Traditional A* to check expansion criteria
+Expanded 59958 nodes, cost is 46
+Expansion count 59958 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 58 for puzzle 10/50
+Running Traditional A* to check expansion criteria
+Expanded 66821 nodes, cost is 51
+Expansion count 66821 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 59 for puzzle 10/50
+Running Traditional A* to check expansion criteria
+Expanded 3990 nodes, cost is 44
+Expansion count 3990 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 60 for puzzle 10/50
+Running Traditional A* to check expansion criteria
+Expanded 17076 nodes, cost is 45
+Puzzle 10 accepted.
+Running Weighted A* with weight 3.0
+Expanded 6549 nodes, cost is 67
+Running Potential Search
+Expanded 28766 nodes, cost is 87
+Running Optimistic Search with weight 3.0
+Expanded 18044 nodes, cost is 45
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 6823 nodes, cost is 53
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 6823 nodes, cost is 53
+Running A* with model 7x7_mse
+Expanded 15062 nodes, cost is 45
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 14975 nodes, cost is 45
+Running A* with model 7x7_custom
+Expanded 17006 nodes, cost is 45
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 16905 nodes, cost is 45
+
+Attempt 61 for puzzle 11/50
+Running Traditional A* to check expansion criteria
+Expanded 163094 nodes, cost is 51
+Expansion count 163094 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 62 for puzzle 11/50
+Running Traditional A* to check expansion criteria
+Expanded 517 nodes, cost is 41
+Expansion count 517 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 63 for puzzle 11/50
+Running Traditional A* to check expansion criteria
+Expanded 67556 nodes, cost is 60
+Expansion count 67556 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 64 for puzzle 11/50
+Running Traditional A* to check expansion criteria
+Expanded 285 nodes, cost is 27
+Expansion count 285 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 65 for puzzle 11/50
+Running Traditional A* to check expansion criteria
+Expanded 7072 nodes, cost is 44
+Puzzle 11 accepted.
+Running Weighted A* with weight 3.0
+Expanded 207 nodes, cost is 50
+Running Potential Search
+Expanded 80 nodes, cost is 46
+Running Optimistic Search with weight 3.0
+Expanded 5160 nodes, cost is 44
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 284 nodes, cost is 46
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 284 nodes, cost is 46
+Running A* with model 7x7_mse
+Expanded 8418 nodes, cost is 44
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 8398 nodes, cost is 44
+Running A* with model 7x7_custom
+Expanded 8074 nodes, cost is 44
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 8054 nodes, cost is 44
+
+Attempt 66 for puzzle 12/50
+Running Traditional A* to check expansion criteria
+Expanded 10247 nodes, cost is 41
+Puzzle 12 accepted.
+Running Weighted A* with weight 3.0
+Expanded 84 nodes, cost is 45
+Running Potential Search
+Expanded 109 nodes, cost is 61
+Running Optimistic Search with weight 3.0
+Expanded 10011 nodes, cost is 41
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 119 nodes, cost is 43
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 119 nodes, cost is 43
+Running A* with model 7x7_mse
+Expanded 17761 nodes, cost is 41
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 17662 nodes, cost is 41
+Running A* with model 7x7_custom
+Expanded 7497 nodes, cost is 41
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 7437 nodes, cost is 41
+
+Attempt 67 for puzzle 13/50
+Running Traditional A* to check expansion criteria
+Expanded 18 nodes, cost is 17
+Expansion count 18 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 68 for puzzle 13/50
+Running Traditional A* to check expansion criteria
+Expanded 86464 nodes, cost is 44
+Expansion count 86464 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 69 for puzzle 13/50
+Running Traditional A* to check expansion criteria
+Expanded 20566 nodes, cost is 44
+Puzzle 13 accepted.
+Running Weighted A* with weight 3.0
+Expanded 201 nodes, cost is 52
+Running Potential Search
+Expanded 832 nodes, cost is 80
+Running Optimistic Search with weight 3.0
+Expanded 15403 nodes, cost is 44
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 211 nodes, cost is 48
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 211 nodes, cost is 48
+Running A* with model 7x7_mse
+Expanded 31545 nodes, cost is 44
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 31465 nodes, cost is 44
+Running A* with model 7x7_custom
+Expanded 17175 nodes, cost is 44
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 17115 nodes, cost is 44
+
+Attempt 70 for puzzle 14/50
+Running Traditional A* to check expansion criteria
+Expanded 17373 nodes, cost is 49
+Puzzle 14 accepted.
+Running Weighted A* with weight 3.0
+Expanded 1555 nodes, cost is 59
+Running Potential Search
+Expanded 1455 nodes, cost is 61
+Running Optimistic Search with weight 3.0
+Expanded 20308 nodes, cost is 49
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 640 nodes, cost is 53
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 640 nodes, cost is 53
+Running A* with model 7x7_mse
+Expanded 22673 nodes, cost is 49
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 22579 nodes, cost is 49
+Running A* with model 7x7_custom
+Expanded 11003 nodes, cost is 49
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 10965 nodes, cost is 49
+
+Attempt 71 for puzzle 15/50
+Running Traditional A* to check expansion criteria
+Expanded 31739 nodes, cost is 55
+Expansion count 31739 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 72 for puzzle 15/50
+Running Traditional A* to check expansion criteria
+Expanded 9222 nodes, cost is 46
+Puzzle 15 accepted.
+Running Weighted A* with weight 3.0
+Expanded 3381 nodes, cost is 64
+Running Potential Search
+Expanded 809 nodes, cost is 88
+Running Optimistic Search with weight 3.0
+Expanded 8894 nodes, cost is 46
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 606 nodes, cost is 48
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 932 nodes, cost is 48
+Running A* with model 7x7_mse
+Expanded 9611 nodes, cost is 46
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 9552 nodes, cost is 46
+Running A* with model 7x7_custom
+Expanded 5004 nodes, cost is 46
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 4967 nodes, cost is 46
+
+Attempt 73 for puzzle 16/50
+Running Traditional A* to check expansion criteria
+Expanded 4530 nodes, cost is 41
+Expansion count 4530 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 74 for puzzle 16/50
+Running Traditional A* to check expansion criteria
+Expanded 15947 nodes, cost is 42
+Puzzle 16 accepted.
+Running Weighted A* with weight 3.0
+Expanded 15424 nodes, cost is 60
+Running Potential Search
+Expanded 67019 nodes, cost is 68
+Running Optimistic Search with weight 3.0
+Expanded 15757 nodes, cost is 42
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 4154 nodes, cost is 44
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 6493 nodes, cost is 54
+Running A* with model 7x7_mse
+Expanded 10486 nodes, cost is 42
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 10446 nodes, cost is 42
+Running A* with model 7x7_custom
+Expanded 6823 nodes, cost is 42
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 6792 nodes, cost is 42
+
+Attempt 75 for puzzle 17/50
+Running Traditional A* to check expansion criteria
+Expanded 6633 nodes, cost is 53
+Puzzle 17 accepted.
+Running Weighted A* with weight 3.0
+Expanded 260 nodes, cost is 61
+Running Potential Search
+Expanded 257 nodes, cost is 61
+Running Optimistic Search with weight 3.0
+Expanded 7673 nodes, cost is 53
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 348 nodes, cost is 59
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 372 nodes, cost is 59
+Running A* with model 7x7_mse
+Expanded 37204 nodes, cost is 55
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 37103 nodes, cost is 55
+Running A* with model 7x7_custom
+Expanded 19352 nodes, cost is 55
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 19274 nodes, cost is 55
+
+Attempt 76 for puzzle 18/50
+Running Traditional A* to check expansion criteria
+Expanded 10837 nodes, cost is 39
+Puzzle 18 accepted.
+Running Weighted A* with weight 3.0
+Expanded 338 nodes, cost is 43
+Running Potential Search
+Expanded 784 nodes, cost is 75
+Running Optimistic Search with weight 3.0
+Expanded 5657 nodes, cost is 39
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 774 nodes, cost is 45
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 777 nodes, cost is 45
+Running A* with model 7x7_mse
+Expanded 10052 nodes, cost is 39
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 9974 nodes, cost is 39
+Running A* with model 7x7_custom
+Expanded 6421 nodes, cost is 39
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 6387 nodes, cost is 39
+
+Attempt 77 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 1785 nodes, cost is 41
+Expansion count 1785 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 78 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 317 nodes, cost is 41
+Expansion count 317 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 79 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 152 nodes, cost is 30
+Expansion count 152 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 80 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 175 nodes, cost is 39
+Expansion count 175 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 81 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 572 nodes, cost is 30
+Expansion count 572 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 82 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 1671261 nodes, cost is None
+Expansion count 1671261 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 83 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 3748 nodes, cost is 55
+Expansion count 3748 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 84 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 72386 nodes, cost is 47
+Expansion count 72386 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 85 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 347 nodes, cost is 39
+Expansion count 347 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 86 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 450 nodes, cost is 33
+Expansion count 450 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 87 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 562 nodes, cost is 28
+Expansion count 562 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 88 for puzzle 19/50
+Running Traditional A* to check expansion criteria
+Expanded 21487 nodes, cost is 53
+Puzzle 19 accepted.
+Running Weighted A* with weight 3.0
+Expanded 5539 nodes, cost is 75
+Running Potential Search
+Expanded 7158 nodes, cost is 137
+Running Optimistic Search with weight 3.0
+Expanded 35681 nodes, cost is 53
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 19355 nodes, cost is 69
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 1913 nodes, cost is 81
+Running A* with model 7x7_mse
+Expanded 10228 nodes, cost is 53
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 10215 nodes, cost is 53
+Running A* with model 7x7_custom
+Expanded 6512 nodes, cost is 53
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 6502 nodes, cost is 53
+
+Attempt 89 for puzzle 20/50
+Running Traditional A* to check expansion criteria
+Expanded 885 nodes, cost is 40
+Expansion count 885 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 90 for puzzle 20/50
+Running Traditional A* to check expansion criteria
+Expanded 68254 nodes, cost is 54
+Expansion count 68254 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 91 for puzzle 20/50
+Running Traditional A* to check expansion criteria
+Expanded 2340 nodes, cost is 39
+Expansion count 2340 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 92 for puzzle 20/50
+Running Traditional A* to check expansion criteria
+Expanded 42174 nodes, cost is 40
+Expansion count 42174 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 93 for puzzle 20/50
+Running Traditional A* to check expansion criteria
+Expanded 4579 nodes, cost is 40
+Expansion count 4579 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 94 for puzzle 20/50
+Running Traditional A* to check expansion criteria
+Expanded 80 nodes, cost is 25
+Expansion count 80 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 95 for puzzle 20/50
+Running Traditional A* to check expansion criteria
+Expanded 561 nodes, cost is 28
+Expansion count 561 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 96 for puzzle 20/50
+Running Traditional A* to check expansion criteria
+Expanded 2358 nodes, cost is 50
+Expansion count 2358 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 97 for puzzle 20/50
+Running Traditional A* to check expansion criteria
+Expanded 991 nodes, cost is 50
+Expansion count 991 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 98 for puzzle 20/50
+Running Traditional A* to check expansion criteria
+Expanded 8688 nodes, cost is 44
+Puzzle 20 accepted.
+Running Weighted A* with weight 3.0
+Expanded 1926 nodes, cost is 60
+Running Potential Search
+Expanded 1496 nodes, cost is 82
+Running Optimistic Search with weight 3.0
+Expanded 8508 nodes, cost is 44
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 497 nodes, cost is 46
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 727 nodes, cost is 46
+Running A* with model 7x7_mse
+Expanded 5240 nodes, cost is 44
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 5175 nodes, cost is 44
+Running A* with model 7x7_custom
+Expanded 3495 nodes, cost is 44
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 3456 nodes, cost is 44
+
+Attempt 99 for puzzle 21/50
+Running Traditional A* to check expansion criteria
+Expanded 9274 nodes, cost is 47
+Puzzle 21 accepted.
+Running Weighted A* with weight 3.0
+Expanded 2848 nodes, cost is 71
+Running Potential Search
+Expanded 964 nodes, cost is 89
+Running Optimistic Search with weight 3.0
+Expanded 5014 nodes, cost is 47
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1198 nodes, cost is 53
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 1407 nodes, cost is 53
+Running A* with model 7x7_mse
+Expanded 11712 nodes, cost is 47
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 11646 nodes, cost is 47
+Running A* with model 7x7_custom
+Expanded 6424 nodes, cost is 47
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 6361 nodes, cost is 47
+
+Attempt 100 for puzzle 22/50
+Running Traditional A* to check expansion criteria
+Expanded 59054 nodes, cost is 52
+Expansion count 59054 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 101 for puzzle 22/50
+Running Traditional A* to check expansion criteria
+Expanded 377 nodes, cost is 54
+Expansion count 377 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 102 for puzzle 22/50
+Running Traditional A* to check expansion criteria
+Expanded 36958 nodes, cost is 46
+Expansion count 36958 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 103 for puzzle 22/50
+Running Traditional A* to check expansion criteria
+Expanded 798 nodes, cost is 33
+Expansion count 798 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 104 for puzzle 22/50
+Running Traditional A* to check expansion criteria
+Expanded 15110 nodes, cost is 53
+Puzzle 22 accepted.
+Running Weighted A* with weight 3.0
+Expanded 2209 nodes, cost is 69
+Running Potential Search
+Expanded 726 nodes, cost is 69
+Running Optimistic Search with weight 3.0
+Expanded 13099 nodes, cost is 53
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 102 nodes, cost is 53
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 122 nodes, cost is 53
+Running A* with model 7x7_mse
+Expanded 15648 nodes, cost is 53
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 15638 nodes, cost is 53
+Running A* with model 7x7_custom
+Expanded 6234 nodes, cost is 53
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 6227 nodes, cost is 53
+
+Attempt 105 for puzzle 23/50
+Running Traditional A* to check expansion criteria
+Expanded 178262 nodes, cost is 48
+Expansion count 178262 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 106 for puzzle 23/50
+Running Traditional A* to check expansion criteria
+Expanded 132829 nodes, cost is 64
+Expansion count 132829 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 107 for puzzle 23/50
+Running Traditional A* to check expansion criteria
+Expanded 82274 nodes, cost is 39
+Expansion count 82274 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 108 for puzzle 23/50
+Running Traditional A* to check expansion criteria
+Expanded 399 nodes, cost is 44
+Expansion count 399 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 109 for puzzle 23/50
+Running Traditional A* to check expansion criteria
+Expanded 2973 nodes, cost is 38
+Expansion count 2973 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 110 for puzzle 23/50
+Running Traditional A* to check expansion criteria
+Expanded 1826 nodes, cost is 32
+Expansion count 1826 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 111 for puzzle 23/50
+Running Traditional A* to check expansion criteria
+Expanded 10388 nodes, cost is 45
+Puzzle 23 accepted.
+Running Weighted A* with weight 3.0
+Expanded 476 nodes, cost is 63
+Running Potential Search
+Expanded 327 nodes, cost is 63
+Running Optimistic Search with weight 3.0
+Expanded 9226 nodes, cost is 45
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1360 nodes, cost is 57
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 1559 nodes, cost is 57
+Running A* with model 7x7_mse
+Expanded 5481 nodes, cost is 45
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 5462 nodes, cost is 45
+Running A* with model 7x7_custom
+Expanded 3182 nodes, cost is 45
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 3170 nodes, cost is 45
+
+Attempt 112 for puzzle 24/50
+Running Traditional A* to check expansion criteria
+Expanded 7600 nodes, cost is 35
+Puzzle 24 accepted.
+Running Weighted A* with weight 3.0
+Expanded 7427 nodes, cost is 51
+Running Potential Search
+Expanded 15365 nodes, cost is 65
+Running Optimistic Search with weight 3.0
+Expanded 8778 nodes, cost is 35
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 980 nodes, cost is 39
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 980 nodes, cost is 39
+Running A* with model 7x7_mse
+Expanded 8054 nodes, cost is 35
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 8026 nodes, cost is 35
+Running A* with model 7x7_custom
+Expanded 5924 nodes, cost is 35
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 5902 nodes, cost is 35
+
+Attempt 113 for puzzle 25/50
+Running Traditional A* to check expansion criteria
+Expanded 34082 nodes, cost is 51
+Expansion count 34082 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 114 for puzzle 25/50
+Running Traditional A* to check expansion criteria
+Expanded 41161 nodes, cost is 57
+Expansion count 41161 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 115 for puzzle 25/50
+Running Traditional A* to check expansion criteria
+Expanded 2059 nodes, cost is 37
+Expansion count 2059 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 116 for puzzle 25/50
+Running Traditional A* to check expansion criteria
+Expanded 1326 nodes, cost is 42
+Expansion count 1326 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 117 for puzzle 25/50
+Running Traditional A* to check expansion criteria
+Expanded 542675 nodes, cost is 52
+Expansion count 542675 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 118 for puzzle 25/50
+Running Traditional A* to check expansion criteria
+Expanded 396 nodes, cost is 40
+Expansion count 396 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 119 for puzzle 25/50
+Running Traditional A* to check expansion criteria
+Expanded 59478 nodes, cost is 44
+Expansion count 59478 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 120 for puzzle 25/50
+Running Traditional A* to check expansion criteria
+Expanded 60629 nodes, cost is 46
+Expansion count 60629 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 121 for puzzle 25/50
+Running Traditional A* to check expansion criteria
+Expanded 16996 nodes, cost is 47
+Puzzle 25 accepted.
+Running Weighted A* with weight 3.0
+Expanded 8419 nodes, cost is 67
+Running Potential Search
+Expanded 6575 nodes, cost is 109
+Running Optimistic Search with weight 3.0
+Expanded 16511 nodes, cost is 47
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1200 nodes, cost is 51
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 1200 nodes, cost is 51
+Running A* with model 7x7_mse
+Expanded 23721 nodes, cost is 47
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 23672 nodes, cost is 47
+Running A* with model 7x7_custom
+Expanded 9958 nodes, cost is 47
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 9929 nodes, cost is 47
+
+Attempt 122 for puzzle 26/50
+Running Traditional A* to check expansion criteria
+Expanded 3132 nodes, cost is 37
+Expansion count 3132 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 123 for puzzle 26/50
+Running Traditional A* to check expansion criteria
+Expanded 409 nodes, cost is 49
+Expansion count 409 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 124 for puzzle 26/50
+Running Traditional A* to check expansion criteria
+Expanded 1865 nodes, cost is 39
+Expansion count 1865 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 125 for puzzle 26/50
+Running Traditional A* to check expansion criteria
+Expanded 19479 nodes, cost is 40
+Puzzle 26 accepted.
+Running Weighted A* with weight 3.0
+Expanded 1055 nodes, cost is 46
+Running Potential Search
+Expanded 3168 nodes, cost is 56
+Running Optimistic Search with weight 3.0
+Expanded 18830 nodes, cost is 40
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 3966 nodes, cost is 44
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 3966 nodes, cost is 44
+Running A* with model 7x7_mse
+Expanded 41833 nodes, cost is 40
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Focal A* with model: Timeout reached.
+Expanded 40126 nodes, cost is None
+Focal A* with model 7x7_mse did not find a solution within the time limit.
+Running A* with model 7x7_custom
+Expanded 27588 nodes, cost is 40
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 27487 nodes, cost is 40
+
+Attempt 126 for puzzle 27/50
+Running Traditional A* to check expansion criteria
+Expanded 5154 nodes, cost is 42
+Puzzle 27 accepted.
+Running Weighted A* with weight 3.0
+Expanded 1118 nodes, cost is 52
+Running Potential Search
+Expanded 748 nodes, cost is 88
+Running Optimistic Search with weight 3.0
+Expanded 6070 nodes, cost is 42
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 144 nodes, cost is 42
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 144 nodes, cost is 42
+Running A* with model 7x7_mse
+Expanded 7340 nodes, cost is 42
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 7282 nodes, cost is 42
+Running A* with model 7x7_custom
+Expanded 4669 nodes, cost is 42
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 4623 nodes, cost is 42
+
+Attempt 127 for puzzle 28/50
+Running Traditional A* to check expansion criteria
+Expanded 1703033 nodes, cost is None
+Expansion count 1703033 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 128 for puzzle 28/50
+Running Traditional A* to check expansion criteria
+Expanded 20550 nodes, cost is 39
+Puzzle 28 accepted.
+Running Weighted A* with weight 3.0
+Expanded 1543 nodes, cost is 51
+Running Potential Search
+Expanded 741 nodes, cost is 75
+Running Optimistic Search with weight 3.0
+Expanded 16048 nodes, cost is 39
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1225 nodes, cost is 41
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 1225 nodes, cost is 41
+Running A* with model 7x7_mse
+Expanded 28040 nodes, cost is 39
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 27863 nodes, cost is 39
+Running A* with model 7x7_custom
+Expanded 21396 nodes, cost is 39
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 21241 nodes, cost is 39
+
+Attempt 129 for puzzle 29/50
+Running Traditional A* to check expansion criteria
+Expanded 156305 nodes, cost is 45
+Expansion count 156305 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 130 for puzzle 29/50
+Running Traditional A* to check expansion criteria
+Expanded 210334 nodes, cost is 54
+Expansion count 210334 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 131 for puzzle 29/50
+Running Traditional A* to check expansion criteria
+Expanded 6749 nodes, cost is 39
+Puzzle 29 accepted.
+Running Weighted A* with weight 3.0
+Expanded 189 nodes, cost is 45
+Running Potential Search
+Expanded 1502 nodes, cost is 45
+Running Optimistic Search with weight 3.0
+Expanded 4290 nodes, cost is 39
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 211 nodes, cost is 45
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 211 nodes, cost is 45
+Running A* with model 7x7_mse
+Expanded 9903 nodes, cost is 39
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 9862 nodes, cost is 39
+Running A* with model 7x7_custom
+Expanded 7102 nodes, cost is 39
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 7062 nodes, cost is 39
+
+Attempt 132 for puzzle 30/50
+Running Traditional A* to check expansion criteria
+Expanded 5443 nodes, cost is 46
+Puzzle 30 accepted.
+Running Weighted A* with weight 3.0
+Expanded 720 nodes, cost is 66
+Running Potential Search
+Expanded 644 nodes, cost is 66
+Running Optimistic Search with weight 3.0
+Expanded 10115 nodes, cost is 46
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1475 nodes, cost is 54
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 2053 nodes, cost is 54
+Running A* with model 7x7_mse
+Expanded 10840 nodes, cost is 46
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 10790 nodes, cost is 46
+Running A* with model 7x7_custom
+Expanded 3252 nodes, cost is 46
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 3230 nodes, cost is 46
+
+Attempt 133 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 1411551 nodes, cost is 62
+Expansion count 1411551 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 134 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 666 nodes, cost is 44
+Expansion count 666 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 135 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 1767362 nodes, cost is None
+Expansion count 1767362 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 136 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 47 nodes, cost is 27
+Expansion count 47 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 137 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 146845 nodes, cost is 42
+Expansion count 146845 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 138 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 1721913 nodes, cost is None
+Expansion count 1721913 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 139 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 41299 nodes, cost is 45
+Expansion count 41299 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 140 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 1803484 nodes, cost is None
+Expansion count 1803484 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 141 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 1077 nodes, cost is 31
+Expansion count 1077 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 142 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 710292 nodes, cost is 58
+Expansion count 710292 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 143 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 274 nodes, cost is 29
+Expansion count 274 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 144 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 216 nodes, cost is 34
+Expansion count 216 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 145 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 113168 nodes, cost is 46
+Expansion count 113168 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 146 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 254 nodes, cost is 39
+Expansion count 254 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 147 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 32193 nodes, cost is 46
+Expansion count 32193 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 148 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 109050 nodes, cost is 60
+Expansion count 109050 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 149 for puzzle 31/50
+Running Traditional A* to check expansion criteria
+Expanded 5870 nodes, cost is 36
+Puzzle 31 accepted.
+Running Weighted A* with weight 3.0
+Expanded 627 nodes, cost is 44
+Running Potential Search
+Expanded 1580 nodes, cost is 48
+Running Optimistic Search with weight 3.0
+Expanded 6547 nodes, cost is 36
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 518 nodes, cost is 40
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 402 nodes, cost is 48
+Running A* with model 7x7_mse
+Expanded 3222 nodes, cost is 36
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 3196 nodes, cost is 36
+Running A* with model 7x7_custom
+Expanded 2916 nodes, cost is 36
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 2898 nodes, cost is 36
+
+Attempt 150 for puzzle 32/50
+Running Traditional A* to check expansion criteria
+Expanded 445 nodes, cost is 48
+Expansion count 445 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 151 for puzzle 32/50
+Running Traditional A* to check expansion criteria
+Expanded 762 nodes, cost is 40
+Expansion count 762 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 152 for puzzle 32/50
+Running Traditional A* to check expansion criteria
+Expanded 26317 nodes, cost is 48
+Puzzle 32 accepted.
+Running Weighted A* with weight 3.0
+Expanded 663 nodes, cost is 68
+Running Potential Search
+Expanded 223 nodes, cost is 76
+Running Optimistic Search with weight 3.0
+Expanded 16164 nodes, cost is 48
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 6369 nodes, cost is 58
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 6407 nodes, cost is 58
+Running A* with model 7x7_mse
+Expanded 22063 nodes, cost is 48
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 21968 nodes, cost is 48
+Running A* with model 7x7_custom
+Expanded 18146 nodes, cost is 48
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 18061 nodes, cost is 48
+
+Attempt 153 for puzzle 33/50
+Running Traditional A* to check expansion criteria
+Expanded 726 nodes, cost is 36
+Expansion count 726 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 154 for puzzle 33/50
+Running Traditional A* to check expansion criteria
+Expanded 9526 nodes, cost is 34
+Puzzle 33 accepted.
+Running Weighted A* with weight 3.0
+Expanded 155 nodes, cost is 38
+Running Potential Search
+Expanded 110 nodes, cost is 38
+Running Optimistic Search with weight 3.0
+Expanded 8886 nodes, cost is 34
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 202 nodes, cost is 34
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 188 nodes, cost is 38
+Running A* with model 7x7_mse
+Expanded 11819 nodes, cost is 34
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 11771 nodes, cost is 34
+Running A* with model 7x7_custom
+Expanded 10415 nodes, cost is 34
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 10369 nodes, cost is 34
+
+Attempt 155 for puzzle 34/50
+Running Traditional A* to check expansion criteria
+Expanded 10765 nodes, cost is 42
+Puzzle 34 accepted.
+Running Weighted A* with weight 3.0
+Expanded 389 nodes, cost is 48
+Running Potential Search
+Expanded 3801 nodes, cost is 48
+Running Optimistic Search with weight 3.0
+Expanded 12917 nodes, cost is 42
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 2129 nodes, cost is 46
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 2129 nodes, cost is 46
+Running A* with model 7x7_mse
+Expanded 11700 nodes, cost is 42
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 11677 nodes, cost is 42
+Running A* with model 7x7_custom
+Expanded 9348 nodes, cost is 42
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 9325 nodes, cost is 42
+
+Attempt 156 for puzzle 35/50
+Running Traditional A* to check expansion criteria
+Expanded 1857 nodes, cost is 48
+Expansion count 1857 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 157 for puzzle 35/50
+Running Traditional A* to check expansion criteria
+Expanded 4030 nodes, cost is 50
+Expansion count 4030 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 158 for puzzle 35/50
+Running Traditional A* to check expansion criteria
+Expanded 113221 nodes, cost is 47
+Expansion count 113221 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 159 for puzzle 35/50
+Running Traditional A* to check expansion criteria
+Expanded 24881 nodes, cost is 52
+Puzzle 35 accepted.
+Running Weighted A* with weight 3.0
+Expanded 4253 nodes, cost is 72
+Running Potential Search
+Expanded 1481 nodes, cost is 94
+Running Optimistic Search with weight 3.0
+Expanded 25030 nodes, cost is 52
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 105442 nodes, cost is 68
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 105499 nodes, cost is 68
+Running A* with model 7x7_mse
+Expanded 13784 nodes, cost is 52
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 13752 nodes, cost is 52
+Running A* with model 7x7_custom
+Expanded 10885 nodes, cost is 52
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 10860 nodes, cost is 52
+
+Attempt 160 for puzzle 36/50
+Running Traditional A* to check expansion criteria
+Expanded 1712874 nodes, cost is None
+Expansion count 1712874 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 161 for puzzle 36/50
+Running Traditional A* to check expansion criteria
+Expanded 27 nodes, cost is 11
+Expansion count 27 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 162 for puzzle 36/50
+Running Traditional A* to check expansion criteria
+Expanded 30401 nodes, cost is 56
+Expansion count 30401 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 163 for puzzle 36/50
+Running Traditional A* to check expansion criteria
+Expanded 37316 nodes, cost is 42
+Expansion count 37316 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 164 for puzzle 36/50
+Running Traditional A* to check expansion criteria
+Expanded 2642 nodes, cost is 40
+Expansion count 2642 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 165 for puzzle 36/50
+Running Traditional A* to check expansion criteria
+Expanded 17851 nodes, cost is 40
+Puzzle 36 accepted.
+Running Weighted A* with weight 3.0
+Expanded 458 nodes, cost is 50
+Running Potential Search
+Expanded 607 nodes, cost is 54
+Running Optimistic Search with weight 3.0
+Expanded 29680 nodes, cost is 40
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 2160 nodes, cost is 42
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 2160 nodes, cost is 42
+Running A* with model 7x7_mse
+Expanded 22572 nodes, cost is 40
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 22374 nodes, cost is 40
+Running A* with model 7x7_custom
+Expanded 14956 nodes, cost is 40
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 14791 nodes, cost is 40
+
+Attempt 166 for puzzle 37/50
+Running Traditional A* to check expansion criteria
+Expanded 6534 nodes, cost is 49
+Puzzle 37 accepted.
+Running Weighted A* with weight 3.0
+Expanded 306 nodes, cost is 59
+Running Potential Search
+Expanded 303 nodes, cost is 59
+Running Optimistic Search with weight 3.0
+Expanded 6293 nodes, cost is 49
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 5093 nodes, cost is 55
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 5093 nodes, cost is 55
+Running A* with model 7x7_mse
+Expanded 5363 nodes, cost is 49
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 5345 nodes, cost is 49
+Running A* with model 7x7_custom
+Expanded 2989 nodes, cost is 49
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 2978 nodes, cost is 49
+
+Attempt 167 for puzzle 38/50
+Running Traditional A* to check expansion criteria
+Expanded 19289 nodes, cost is 57
+Puzzle 38 accepted.
+Running Weighted A* with weight 3.0
+Expanded 24197 nodes, cost is 85
+Running Potential Search
+Expanded 50272 nodes, cost is 113
+Running Optimistic Search with weight 3.0
+Expanded 18910 nodes, cost is 57
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 4425 nodes, cost is 67
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 3099 nodes, cost is 75
+Running A* with model 7x7_mse
+Expanded 28337 nodes, cost is 57
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 28230 nodes, cost is 57
+Running A* with model 7x7_custom
+Expanded 23157 nodes, cost is 57
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 23077 nodes, cost is 57
+
+Attempt 168 for puzzle 39/50
+Running Traditional A* to check expansion criteria
+Expanded 74478 nodes, cost is 51
+Expansion count 74478 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 169 for puzzle 39/50
+Running Traditional A* to check expansion criteria
+Expanded 19346 nodes, cost is 53
+Puzzle 39 accepted.
+Running Weighted A* with weight 3.0
+Expanded 26511 nodes, cost is 95
+Running Potential Search
+Expanded 1247 nodes, cost is 147
+Running Optimistic Search with weight 3.0
+Expanded 18708 nodes, cost is 53
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 9279 nodes, cost is 73
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 5863 nodes, cost is 81
+Running A* with model 7x7_mse
+Expanded 8486 nodes, cost is 53
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 8461 nodes, cost is 53
+Running A* with model 7x7_custom
+Expanded 6062 nodes, cost is 53
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 6036 nodes, cost is 53
+
+Attempt 170 for puzzle 40/50
+Running Traditional A* to check expansion criteria
+Expanded 18507 nodes, cost is 61
+Puzzle 40 accepted.
+Running Weighted A* with weight 3.0
+Expanded 15840 nodes, cost is 105
+Running Potential Search
+Expanded 34651 nodes, cost is 199
+Running Optimistic Search with weight 3.0
+Expanded 18703 nodes, cost is 61
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 735209 nodes, cost is 87
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 175359 nodes, cost is 123
+Running A* with model 7x7_mse
+Expanded 25908 nodes, cost is 61
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 25874 nodes, cost is 61
+Running A* with model 7x7_custom
+Expanded 11514 nodes, cost is 61
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 11505 nodes, cost is 61
+
+Attempt 171 for puzzle 41/50
+Running Traditional A* to check expansion criteria
+Expanded 32861 nodes, cost is 44
+Expansion count 32861 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 172 for puzzle 41/50
+Running Traditional A* to check expansion criteria
+Expanded 1994 nodes, cost is 33
+Expansion count 1994 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 173 for puzzle 41/50
+Running Traditional A* to check expansion criteria
+Expanded 11885 nodes, cost is 55
+Puzzle 41 accepted.
+Running Weighted A* with weight 3.0
+Expanded 12591 nodes, cost is 81
+Running Potential Search
+Expanded 4822 nodes, cost is 117
+Running Optimistic Search with weight 3.0
+Expanded 11501 nodes, cost is 55
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1101 nodes, cost is 63
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 1148 nodes, cost is 63
+Running A* with model 7x7_mse
+Expanded 7912 nodes, cost is 55
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 7896 nodes, cost is 55
+Running A* with model 7x7_custom
+Expanded 3406 nodes, cost is 55
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 3401 nodes, cost is 55
+
+Attempt 174 for puzzle 42/50
+Running Traditional A* to check expansion criteria
+Expanded 4750 nodes, cost is 49
+Expansion count 4750 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 175 for puzzle 42/50
+Running Traditional A* to check expansion criteria
+Expanded 40332 nodes, cost is 50
+Expansion count 40332 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 176 for puzzle 42/50
+Running Traditional A* to check expansion criteria
+Expanded 406 nodes, cost is 34
+Expansion count 406 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 177 for puzzle 42/50
+Running Traditional A* to check expansion criteria
+Expanded 221 nodes, cost is 45
+Expansion count 221 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 178 for puzzle 42/50
+Running Traditional A* to check expansion criteria
+Expanded 8845 nodes, cost is 42
+Puzzle 42 accepted.
+Running Weighted A* with weight 3.0
+Expanded 583 nodes, cost is 48
+Running Potential Search
+Expanded 447 nodes, cost is 48
+Running Optimistic Search with weight 3.0
+Expanded 10409 nodes, cost is 42
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 376 nodes, cost is 44
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 375 nodes, cost is 44
+Running A* with model 7x7_mse
+Expanded 12338 nodes, cost is 42
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 12281 nodes, cost is 42
+Running A* with model 7x7_custom
+Expanded 9582 nodes, cost is 42
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 9523 nodes, cost is 42
+
+Attempt 179 for puzzle 43/50
+Running Traditional A* to check expansion criteria
+Expanded 3902 nodes, cost is 46
+Expansion count 3902 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 180 for puzzle 43/50
+Running Traditional A* to check expansion criteria
+Expanded 327957 nodes, cost is 69
+Expansion count 327957 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 181 for puzzle 43/50
+Running Traditional A* to check expansion criteria
+Expanded 1361 nodes, cost is 36
+Expansion count 1361 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 182 for puzzle 43/50
+Running Traditional A* to check expansion criteria
+Expanded 6779 nodes, cost is 33
+Puzzle 43 accepted.
+Running Weighted A* with weight 3.0
+Expanded 139 nodes, cost is 37
+Running Potential Search
+Expanded 93 nodes, cost is 43
+Running Optimistic Search with weight 3.0
+Expanded 4380 nodes, cost is 33
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 292 nodes, cost is 35
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 186 nodes, cost is 37
+Running A* with model 7x7_mse
+Expanded 8041 nodes, cost is 33
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 8019 nodes, cost is 33
+Running A* with model 7x7_custom
+Expanded 7369 nodes, cost is 33
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 7342 nodes, cost is 33
+
+Attempt 183 for puzzle 44/50
+Running Traditional A* to check expansion criteria
+Expanded 33803 nodes, cost is 47
+Expansion count 33803 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 184 for puzzle 44/50
+Running Traditional A* to check expansion criteria
+Expanded 12097 nodes, cost is 49
+Puzzle 44 accepted.
+Running Weighted A* with weight 3.0
+Expanded 773 nodes, cost is 57
+Running Potential Search
+Expanded 1695 nodes, cost is 87
+Running Optimistic Search with weight 3.0
+Expanded 5037 nodes, cost is 49
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 442 nodes, cost is 57
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 385 nodes, cost is 57
+Running A* with model 7x7_mse
+Expanded 7061 nodes, cost is 49
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 6998 nodes, cost is 49
+Running A* with model 7x7_custom
+Expanded 3166 nodes, cost is 49
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 3141 nodes, cost is 49
+
+Attempt 185 for puzzle 45/50
+Running Traditional A* to check expansion criteria
+Expanded 526 nodes, cost is 37
+Expansion count 526 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 186 for puzzle 45/50
+Running Traditional A* to check expansion criteria
+Expanded 319479 nodes, cost is 72
+Expansion count 319479 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 187 for puzzle 45/50
+Running Traditional A* to check expansion criteria
+Expanded 750 nodes, cost is 35
+Expansion count 750 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 188 for puzzle 45/50
+Running Traditional A* to check expansion criteria
+Expanded 38937 nodes, cost is 56
+Expansion count 38937 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 189 for puzzle 45/50
+Running Traditional A* to check expansion criteria
+Expanded 663 nodes, cost is 39
+Expansion count 663 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 190 for puzzle 45/50
+Running Traditional A* to check expansion criteria
+Expanded 5179 nodes, cost is 41
+Puzzle 45 accepted.
+Running Weighted A* with weight 3.0
+Expanded 1189 nodes, cost is 47
+Running Potential Search
+Expanded 1199 nodes, cost is 49
+Running Optimistic Search with weight 3.0
+Expanded 7952 nodes, cost is 41
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 500 nodes, cost is 43
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 504 nodes, cost is 43
+Running A* with model 7x7_mse
+Expanded 6011 nodes, cost is 41
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 5973 nodes, cost is 41
+Running A* with model 7x7_custom
+Expanded 2975 nodes, cost is 41
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 2949 nodes, cost is 41
+
+Attempt 191 for puzzle 46/50
+Running Traditional A* to check expansion criteria
+Expanded 1635 nodes, cost is 40
+Expansion count 1635 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 192 for puzzle 46/50
+Running Traditional A* to check expansion criteria
+Expanded 36366 nodes, cost is 45
+inference.py:1547: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(model_path, map_location=device))
+Expansion count 36366 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 193 for puzzle 46/50
+Running Traditional A* to check expansion criteria
+Expanded 10954 nodes, cost is 44
+Puzzle 46 accepted.
+Running Weighted A* with weight 3.0
+Expanded 3147 nodes, cost is 80
+Running Potential Search
+Expanded 4073 nodes, cost is 146
+Running Optimistic Search with weight 3.0
+Expanded 15260 nodes, cost is 44
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 6596 nodes, cost is 52
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 6333 nodes, cost is 52
+Running A* with model 7x7_mse
+Expanded 15156 nodes, cost is 44
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 15070 nodes, cost is 44
+Running A* with model 7x7_custom
+Expanded 8388 nodes, cost is 44
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 8330 nodes, cost is 44
+
+Attempt 194 for puzzle 47/50
+Running Traditional A* to check expansion criteria
+Expanded 44 nodes, cost is 29
+Expansion count 44 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 195 for puzzle 47/50
+Running Traditional A* to check expansion criteria
+Expanded 29324 nodes, cost is 47
+Puzzle 47 accepted.
+Running Weighted A* with weight 3.0
+Expanded 384 nodes, cost is 63
+Running Potential Search
+Expanded 372 nodes, cost is 81
+Running Optimistic Search with weight 3.0
+Expanded 49399 nodes, cost is 47
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1999 nodes, cost is 55
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 2058 nodes, cost is 57
+Running A* with model 7x7_mse
+Expanded 28282 nodes, cost is 47
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 28191 nodes, cost is 47
+Running A* with model 7x7_custom
+Expanded 14878 nodes, cost is 47
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 14816 nodes, cost is 47
+
+Attempt 196 for puzzle 48/50
+Running Traditional A* to check expansion criteria
+Expanded 389803 nodes, cost is 43
+Expansion count 389803 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 197 for puzzle 48/50
+Running Traditional A* to check expansion criteria
+Expanded 341299 nodes, cost is 60
+Expansion count 341299 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 198 for puzzle 48/50
+Running Traditional A* to check expansion criteria
+Expanded 131 nodes, cost is 38
+Expansion count 131 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 199 for puzzle 48/50
+Running Traditional A* to check expansion criteria
+Expanded 1061 nodes, cost is 47
+Expansion count 1061 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 200 for puzzle 48/50
+Running Traditional A* to check expansion criteria
+Expanded 150604 nodes, cost is 55
+Expansion count 150604 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 201 for puzzle 48/50
+Running Traditional A* to check expansion criteria
+Expanded 183 nodes, cost is 44
+Expansion count 183 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 202 for puzzle 48/50
+Running Traditional A* to check expansion criteria
+Expanded 294 nodes, cost is 33
+Expansion count 294 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 203 for puzzle 48/50
+Running Traditional A* to check expansion criteria
+Expanded 3351 nodes, cost is 43
+Expansion count 3351 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 204 for puzzle 48/50
+Running Traditional A* to check expansion criteria
+Expanded 10232 nodes, cost is 37
+Puzzle 48 accepted.
+Running Weighted A* with weight 3.0
+Expanded 365 nodes, cost is 47
+Running Potential Search
+Expanded 3331 nodes, cost is 69
+Running Optimistic Search with weight 3.0
+Expanded 10309 nodes, cost is 37
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 1209 nodes, cost is 39
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 1217 nodes, cost is 39
+Running A* with model 7x7_mse
+Expanded 29223 nodes, cost is 37
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 28971 nodes, cost is 37
+Running A* with model 7x7_custom
+Expanded 19872 nodes, cost is 37
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 19658 nodes, cost is 37
+
+Attempt 205 for puzzle 49/50
+Running Traditional A* to check expansion criteria
+Expanded 3514 nodes, cost is 36
+Expansion count 3514 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 206 for puzzle 49/50
+Running Traditional A* to check expansion criteria
+Expanded 147175 nodes, cost is 55
+Expansion count 147175 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 207 for puzzle 49/50
+Running Traditional A* to check expansion criteria
+Expanded 1076 nodes, cost is 49
+Expansion count 1076 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 208 for puzzle 49/50
+Running Traditional A* to check expansion criteria
+Expanded 8120 nodes, cost is 41
+Puzzle 49 accepted.
+Running Weighted A* with weight 3.0
+Expanded 9804 nodes, cost is 49
+Running Potential Search
+Expanded 12946 nodes, cost is 67
+Running Optimistic Search with weight 3.0
+Expanded 8002 nodes, cost is 41
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 3872 nodes, cost is 45
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 5848 nodes, cost is 45
+Running A* with model 7x7_mse
+Expanded 5348 nodes, cost is 41
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 5311 nodes, cost is 41
+Running A* with model 7x7_custom
+Expanded 3064 nodes, cost is 41
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 3043 nodes, cost is 41
+
+Attempt 209 for puzzle 50/50
+Running Traditional A* to check expansion criteria
+Expanded 245 nodes, cost is 31
+Expansion count 245 not within [5000, 30000]. Regenerating puzzle.
+
+Attempt 210 for puzzle 50/50
+Running Traditional A* to check expansion criteria
+Expanded 26733 nodes, cost is 53
+Puzzle 50 accepted.
+Running Weighted A* with weight 3.0
+Expanded 630 nodes, cost is 75
+Running Potential Search
+Expanded 1646 nodes, cost is 105
+Running Optimistic Search with weight 3.0
+Expanded 27719 nodes, cost is 53
+Using w1=1.7320508075688774 and w2=1.7320508075688772 for MHA* algorithms.
+Running Independent Multi-Heuristic A* (IMHA*)
+Expanded 2815 nodes, cost is 63
+Running Shared Multi-Heuristic A* (SMHA*)
+Expanded 2844 nodes, cost is 63
+Running A* with model 7x7_mse
+Expanded 18319 nodes, cost is 53
+Running Focal A* with model 7x7_mse and epsilon 1.5
+Expanded 18208 nodes, cost is 53
+Running A* with model 7x7_custom
+Expanded 8850 nodes, cost is 53
+Running Focal A* with model 7x7_custom and epsilon 1.5
+Expanded 8806 nodes, cost is 53
+Assessment results saved to algorithm_results.csv

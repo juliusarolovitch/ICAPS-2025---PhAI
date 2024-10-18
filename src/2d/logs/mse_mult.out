@@ -1,0 +1,41 @@
+Using device: cuda
+Loaded normalization values from /home/julius/Desktop/icra_phai/src/2d/normalization_values/mult_normalization_values.pkl
+Loaded dataset from /home/julius/Desktop/icra_phai/src/2d/datasets/mult_dataset.pkl
+Training samples: 4429684, Validation samples: 1107422
+Calculated input size for MLP: 520
+Training MLPModel with learning type: priority
+Training model with loss function: mse
+Training Epochs:   0%|          | 0/20 [00:00<?, ?it/s]Training Epochs:   5%|▌         | 1/20 [05:39<1:47:23, 339.15s/it]Epoch: 1/20, Train Loss: 0.004328, Val Loss: 0.002514, LR: 0.001
+Best model saved to mse_mult.pth
+Training Epochs:  10%|█         | 2/20 [11:59<1:49:04, 363.60s/it]Epoch: 2/20, Train Loss: 0.002879, Val Loss: 0.002215, LR: 0.001
+Best model saved to mse_mult.pth
+Training Epochs:  15%|█▌        | 3/20 [18:30<1:46:32, 376.04s/it]Epoch: 3/20, Train Loss: 0.002714, Val Loss: 0.002156, LR: 0.001
+Best model saved to mse_mult.pth
+Training Epochs:  20%|██        | 4/20 [25:12<1:42:56, 386.02s/it]Epoch: 4/20, Train Loss: 0.002607, Val Loss: 0.001966, LR: 0.001
+Best model saved to mse_mult.pth
+Training Epochs:  25%|██▌       | 5/20 [31:51<1:37:42, 390.84s/it]Epoch: 5/20, Train Loss: 0.002533, Val Loss: 0.001949, LR: 0.001
+Best model saved to mse_mult.pth
+Training Epochs:  30%|███       | 6/20 [38:20<1:31:03, 390.22s/it]Epoch: 6/20, Train Loss: 0.002470, Val Loss: 0.001880, LR: 0.001
+Best model saved to mse_mult.pth
+Training Epochs:  35%|███▌      | 7/20 [44:58<1:25:07, 392.90s/it]Epoch: 7/20, Train Loss: 0.002419, Val Loss: 0.001831, LR: 0.001
+Best model saved to mse_mult.pth
+Training Epochs:  40%|████      | 8/20 [51:38<1:19:00, 395.07s/it]Epoch: 8/20, Train Loss: 0.002378, Val Loss: 0.001644, LR: 0.001
+Best model saved to mse_mult.pth
+Training Epochs:  45%|████▌     | 9/20 [58:21<1:12:52, 397.50s/it]Epoch: 9/20, Train Loss: 0.002338, Val Loss: 0.001723, LR: 0.001
+Training Epochs:  50%|█████     | 10/20 [1:05:00<1:06:18, 397.87s/it]Epoch: 10/20, Train Loss: 0.002306, Val Loss: 0.001728, LR: 0.001
+Training Epochs:  55%|█████▌    | 11/20 [1:11:42<59:52, 399.18s/it]  Epoch: 11/20, Train Loss: 0.002276, Val Loss: 0.001697, LR: 0.001
+Training Epochs:  60%|██████    | 12/20 [1:18:16<53:01, 397.66s/it]Epoch: 12/20, Train Loss: 0.002253, Val Loss: 0.001758, LR: 0.001
+Training Epochs:  65%|██████▌   | 13/20 [1:24:52<46:20, 397.24s/it]Epoch: 13/20, Train Loss: 0.002223, Val Loss: 0.001481, LR: 0.001
+Best model saved to mse_mult.pth
+Training Epochs:  70%|███████   | 14/20 [1:31:28<39:40, 396.77s/it]Epoch: 14/20, Train Loss: 0.002201, Val Loss: 0.001592, LR: 0.001
+Training Epochs:  75%|███████▌  | 15/20 [1:38:12<33:14, 398.95s/it]Epoch: 15/20, Train Loss: 0.002181, Val Loss: 0.001630, LR: 0.001
+Training Epochs:  80%|████████  | 16/20 [1:44:49<26:34, 398.51s/it]Epoch: 16/20, Train Loss: 0.002160, Val Loss: 0.001600, LR: 0.001
+Training Epochs:  85%|████████▌ | 17/20 [1:51:29<19:56, 398.79s/it]Epoch: 17/20, Train Loss: 0.002145, Val Loss: 0.001534, LR: 0.001
+Training Epochs:  90%|█████████ | 18/20 [1:58:01<13:13, 396.90s/it]Epoch: 18/20, Train Loss: 0.002127, Val Loss: 0.001445, LR: 0.001
+Best model saved to mse_mult.pth
+Training Epochs:  95%|█████████▌| 19/20 [2:04:32<06:34, 394.97s/it]Epoch: 19/20, Train Loss: 0.002110, Val Loss: 0.001400, LR: 0.001
+Best model saved to mse_mult.pth
+Training Epochs: 100%|██████████| 20/20 [2:11:00<00:00, 393.07s/it]Training Epochs: 100%|██████████| 20/20 [2:11:00<00:00, 393.05s/it]
+Epoch: 20/20, Train Loss: 0.002092, Val Loss: 0.001465, LR: 0.001
+Best validation loss: 0.001400
+Training completed. Best model saved as mse_mult.pth
