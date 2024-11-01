@@ -16,8 +16,18 @@ from dataclasses import dataclass, field
 # ---------------------------
 
 class FStarDataset(Dataset):
-    def __init__(self, data):
+    def __init__(self, data, map_width, map_height):
+        """
+        Initializes the FStarDataset.
+
+        Args:
+            data (list): List of data tuples.
+            map_width (int): Width of the map used for normalization.
+            map_height (int): Height of the map used for normalization.
+        """
         self.data = data
+        self.map_width = map_width
+        self.map_height = map_height
 
     def __len__(self):
         return len(self.data)
@@ -25,25 +35,38 @@ class FStarDataset(Dataset):
     def __getitem__(self, idx):
         try:
             # Unpack all seven elements from the dataset
-            encoded_map, start, goal, current, g_normalized, h_normalized, target_value = self.data[idx]
+            encoded_map, start, goal, current, g_normalized, h_normalized, target_normalized = self.data[idx]
 
-            # Normalize positional coordinates by dividing by 127 (assuming map size is 128x128)
-            start_normalized = np.array(start) / 127
-            goal_normalized = np.array(goal) / 127
-            current_normalized = np.array(current) / 127
+            # Normalize positional coordinates by dividing by map height, width, and 270 for theta
+            # Theta is one of {0, 90, 180, 270}, normalized to {0.0, 0.333, 0.666, 1.0}
+            start_normalized = np.array([
+                start[0] / self.map_height, 
+                start[1] / self.map_width, 
+                start[2] / 270.0
+            ])
+            goal_normalized = np.array([
+                goal[0] / self.map_height, 
+                goal[1] / self.map_width, 
+                goal[2] / 270.0
+            ])
+            current_normalized = np.array([
+                current[0] / self.map_height, 
+                current[1] / self.map_width, 
+                current[2] / 270.0
+            ])
 
             # Concatenate all components to form the input tensor
             input_tensor = np.concatenate([
-                start_normalized,          # 2 elements
-                goal_normalized,           # 2 elements
-                current_normalized,        # 2 elements
-                encoded_map,
-                [g_normalized, h_normalized],  # 2 elements
+                encoded_map,               # latent_dim elements
+                start_normalized,          # 3 elements
+                goal_normalized,           # 3 elements
+                current_normalized,        # 3 elements
+                [g_normalized, h_normalized]  # 2 elements
             ])
 
             # Convert to PyTorch tensors
             input_tensor = torch.from_numpy(input_tensor).float()
-            f_star_value_tensor = torch.tensor([target_value]).float()  # Shape: [1]
+            f_star_value_tensor = torch.tensor([target_normalized]).float()  # Updated line
 
             # Optional: Add sanity checks
             assert torch.isfinite(input_tensor).all(), "Non-finite values found in input_tensor"
@@ -53,6 +76,8 @@ class FStarDataset(Dataset):
         except Exception as e:
             print(f"Error processing index {idx}: {e}")
             raise e
+
+
 
 # ---------------------------
 # Custom Loss Function
@@ -66,7 +91,8 @@ def custom_loss_function(all_inputs, output, target, lambda1=0.0, lambda2=0.0, l
         outputs=output,
         inputs=all_inputs,
         grad_outputs=torch.ones_like(output),
-        create_graph=True
+        create_graph=True,
+        retain_graph=True
     )[0]
     
     # Assuming that g_normalized and h_normalized are at the end of the input tensor
@@ -79,12 +105,15 @@ def custom_loss_function(all_inputs, output, target, lambda1=0.0, lambda2=0.0, l
     # Property 2: Gradient w.r.t h should be greater than gradient w.r.t g
     gradient_loss2 = torch.mean(F.relu(grad_g - grad_h))  # Enforces grad_g ≤ grad_h
     
+    # Property 4: Sum of gradients ≥ 2
     gradient_loss4 = torch.mean(F.relu(grad_g + grad_h - 2))
-
     
     # Total loss combines MSE loss and penalties for violating properties
     total_loss = mse_loss + lambda1 * gradient_loss1 + lambda2 * gradient_loss2 + lambda3 * gradient_loss4
-    return total_loss, mse_loss.item(), gradient_loss1.item(), gradient_loss2.item(), gradient_loss4.item()
+    
+    # Return all required values, including gradients
+    return total_loss, mse_loss.item(), gradient_loss1.item(), gradient_loss2.item(), gradient_loss4.item(), grad_g.detach(), grad_h.detach()
+
 
 # ---------------------------
 # Lambda Schedule Function
@@ -101,7 +130,8 @@ def create_lambda_schedule(lambda_start, lambda_end, epochs, growth_rate):
 # ---------------------------
 
 def train_model(model, train_loader, val_loader, device, epochs=100, lr=0.001, patience=10, model_path="model.pth",
-                loss_fn="mse", criterion=None, lambda_schedules=None, save_each_epoch=False, save_dir="models"):
+               loss_fn="mse", criterion=None, lambda_schedules=None, save_each_epoch=False, save_dir="models",
+               debug=False, debug_batch=0, num_debug_samples=5):
     print(f"Training model with loss function: {loss_fn}")
     optimizer = optim.Adam(model.parameters(), lr=lr)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
@@ -120,7 +150,9 @@ def train_model(model, train_loader, val_loader, device, epochs=100, lr=0.001, p
     if save_each_epoch:
         os.makedirs(save_dir, exist_ok=True)
 
-    for epoch in tqdm(range(epochs), desc="Training Epochs"):
+    # Outer progress bar for epochs
+    epoch_bar = tqdm(range(epochs), desc="Training Epochs", position=0, leave=True)
+    for epoch in epoch_bar:
         model.train()
         train_loss = 0.0
         train_mse_loss = 0.0
@@ -136,7 +168,9 @@ def train_model(model, train_loader, val_loader, device, epochs=100, lr=0.001, p
         else:
             lambda1 = lambda2 = lambda3 = 0.0  # Default to zero if no schedule provided
 
-        for batch_idx, (data, target) in enumerate(train_loader):
+        # Inner progress bar for batches
+        batch_bar = tqdm(train_loader, desc=f"Epoch {epoch + 1}/{epochs}", position=1, leave=False)
+        for batch_idx, (data, target) in enumerate(batch_bar):
             data, target = data.to(device), target.to(device)
             data.requires_grad_(True)  # Ensure gradients can be computed
             optimizer.zero_grad()
@@ -146,9 +180,10 @@ def train_model(model, train_loader, val_loader, device, epochs=100, lr=0.001, p
                 loss = criterion(output, target)
                 mse_loss_val = loss.item()
                 gradient_loss1_val = gradient_loss2_val = gradient_loss4_val = 0.0
+                grad_g = grad_h = torch.zeros(data.size(0)).to(device)
             else:
-                loss, mse_loss_val, gradient_loss1_val, gradient_loss2_val, gradient_loss4_val = criterion(
-                    all_inputs, output, target, lambda1, lambda2, lambda3
+                loss, mse_loss_val, gradient_loss1_val, gradient_loss2_val, gradient_loss4_val, grad_g, grad_h = criterion(
+                    data, output, target, lambda1, lambda2, lambda3
                 )
 
             loss.backward()
@@ -159,12 +194,29 @@ def train_model(model, train_loader, val_loader, device, epochs=100, lr=0.001, p
             train_gradient_loss2 += gradient_loss2_val
             train_gradient_loss4 += gradient_loss4_val
 
+            # Update batch progress bar with current batch loss
+            batch_bar.set_postfix({
+                'Loss': f"{loss.item():.7f}",
+                'MSE': f"{mse_loss_val:.7f}",
+                'Grad1': f"{gradient_loss1_val:.7f}",
+                'Grad2': f"{gradient_loss2_val:.7f}",
+                'Grad4': f"{gradient_loss4_val:.7f}"
+            })
+
+            # Debugging: Print tensors for a specific batch
+            if debug and epoch == 0 and batch_idx == debug_batch:
+                print_debug_tensors(
+                    data, target, output, grad_g, grad_h, batch_idx=batch_idx, num_debug_samples=num_debug_samples
+                )
+
+        # Calculate average losses
         train_loss /= len(train_loader)
         train_mse_loss /= len(train_loader)
         train_gradient_loss1 /= len(train_loader)
         train_gradient_loss2 /= len(train_loader)
         train_gradient_loss4 /= len(train_loader)
 
+        # Validation phase
         model.eval()
         val_loss = 0.0
         with torch.no_grad():
@@ -177,36 +229,48 @@ def train_model(model, train_loader, val_loader, device, epochs=100, lr=0.001, p
         val_loss /= len(val_loader)
 
         current_lr = optimizer.param_groups[0]['lr']
-        print(f'Epoch: {epoch + 1}/{epochs}, Train Loss: {train_loss:.6f}, '
-              f'MSE Loss: {train_mse_loss:.6f}, '
-              f'Grad1 Loss: {train_gradient_loss1:.6f}, '
-              f'Grad2 Loss: {train_gradient_loss2:.6f}, '
-              f'Grad4 Loss: {train_gradient_loss4:.6f}, '
-              f'Val Loss: {val_loss:.6f}, LR: {current_lr}')
-        if lambda_schedules is not None:
-            print(f'    Current Lambdas: lambda1={lambda1:.4f}, lambda2={lambda2:.4f}, lambda3={lambda3:.4f}')
 
+        # Use tqdm.write to avoid interfering with the progress bars
+        tqdm.write(
+            f"Epoch [{epoch + 1}/{epochs}] - "
+            f"Train Loss: {train_loss:.6f}, "
+            f"MSE Loss: {train_mse_loss:.6f}, "
+            f"Grad1 Loss: {train_gradient_loss1:.6f}, "
+            f"Grad2 Loss: {train_gradient_loss2:.6f}, "
+            f"Grad4 Loss: {train_gradient_loss4:.6f}, "
+            f"Val Loss: {val_loss:.6f}, LR: {current_lr:.6f}"
+        )
+        if lambda_schedules is not None:
+            tqdm.write(
+                f"    Current Lambdas: lambda1={lambda1:.4f}, lambda2={lambda2:.4f}, lambda3={lambda3:.4f}"
+            )
+
+        # Update learning rate scheduler
         scheduler.step(val_loss)
 
         # Save the model at each epoch if flag is set
         if save_each_epoch:
             epoch_model_path = os.path.join(save_dir, f"model_epoch_{epoch + 1}.pth")
             torch.save(model.state_dict(), epoch_model_path)
-            print(f"Model saved at {epoch_model_path}")
+            tqdm.write(f"Model saved at {epoch_model_path}")
 
+        # Check for improvement
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             torch.save(model.state_dict(), model_path)
-            print(f"Best model saved to {model_path}")
+            tqdm.write(f"Best model saved to {model_path}")
             patience_counter = 0
         else:
             patience_counter += 1
             if patience_counter >= patience:
-                print(f"Early stopping triggered after {epoch + 1} epochs.")
+                tqdm.write(f"Early stopping triggered after {epoch + 1} epochs.")
                 break
 
+    epoch_bar.close()
     print(f"Best validation loss: {best_val_loss:.6f}")
     return model
+
+
 
 
 # ---------------------------
@@ -236,16 +300,39 @@ def parse_arguments():
                         default="model.pth", help="Path to save the best model")
     parser.add_argument("--learning_type", type=str, choices=[
                         'heuristic', 'priority'], default='priority', help="Choose the type of function that is being learned.")
-    parser.add_argument("--lambda1_start", type=float, default=0.05, help="Starting value of lambda1")
-    parser.add_argument("--lambda1_end", type=float, default=.8, help="Ending value of lambda1")
-    parser.add_argument("--lambda2_start", type=float, default=0.05, help="Starting value of lambda2")
-    parser.add_argument("--lambda2_end", type=float, default=.8, help="Ending value of lambda2")
-    parser.add_argument("--lambda3_start", type=float, default=0.05, help="Starting value of lambda3")
-    parser.add_argument("--lambda3_end", type=float, default=.8, help="Ending value of lambda3")
+    parser.add_argument("--lambda1_start", type=float, default=.05, help="Starting value of lambda1")
+    parser.add_argument("--lambda1_end", type=float, default=1, help="Ending value of lambda1")
+    parser.add_argument("--lambda2_start", type=float, default=.05, help="Starting value of lambda2")
+    parser.add_argument("--lambda2_end", type=float, default=1, help="Ending value of lambda2")
+    parser.add_argument("--lambda3_start", type=float, default=.05, help="Starting value of lambda3")
+    parser.add_argument("--lambda3_end", type=float, default=1, help="Ending value of lambda3")
     parser.add_argument("--growth_rate", type=float, default=2.0, help="Growth rate for exponential increase of lambdas")
     parser.add_argument("--save_each_epoch", action='store_true', help="Save model at each epoch")
     parser.add_argument("--save_dir", type=str, default="models", help="Directory to save models at each epoch")
     return parser.parse_args()
+
+def print_debug_tensors(data, target, output, grad_g, grad_h, batch_idx=0, num_debug_samples=5):
+    """
+    Prints selected tensors for debugging purposes.
+
+    Args:
+        data (torch.Tensor): Input tensor, shape [batch_size, ...]
+        target (torch.Tensor): Target tensor, shape [batch_size, ...]
+        output (torch.Tensor): Model output, shape [batch_size, ...]
+        grad_g (torch.Tensor): Gradient w.r. to g_normalized, shape [batch_size]
+        grad_h (torch.Tensor): Gradient w.r. to h_normalized, shape [batch_size]
+        batch_idx (int): Current batch index.
+        num_samples (int): Number of samples to print.
+    """
+    print(f"\nBatch {batch_idx} Debug Information:")
+    for i in range(min(num_debug_samples, data.size(0))):
+        print(f"\nSample {i+1}:")
+        print(f"  Input Tensor: {data[i].detach().cpu().numpy()}")
+        print(f"  Target F* Value: {target[i].item()}")
+        print(f"  Output: {output[i].item()}")
+        print(f"  Gradient w.r.t g_normalized: {grad_g[i].item()}")
+        print(f"  Gradient w.r.t h_normalized: {grad_h[i].item()}")
+
 
 # ---------------------------
 # Main Function
@@ -253,7 +340,6 @@ def parse_arguments():
 
 def main():
     args = parse_arguments()
-
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
@@ -273,7 +359,15 @@ def main():
         dataset = pickle.load(f)
     print(f"Loaded dataset from {args.dataset_path}")
 
-    full_dataset = FStarDataset(dataset)
+    # **Ensure that map_width and map_height align with data generation**
+    # From data generation script:
+    # width=512, height=128
+    map_width = 512
+    map_height = 128
+
+    full_dataset = FStarDataset(dataset, map_width=map_width, map_height=map_height)  # Correct dimensions
+
+    # Verify the input tensor structure
 
     # Split into training and validation sets
     train_size = int(0.8 * len(full_dataset))
@@ -285,13 +379,13 @@ def main():
 
     # Create data loaders
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size,
-                              shuffle=True, pin_memory=True, num_workers=4)
+                              shuffle=True, pin_memory=True, num_workers=16)
     val_loader = DataLoader(val_dataset, batch_size=args.batch_size,
-                            shuffle=False, pin_memory=True, num_workers=4)
+                            shuffle=False, pin_memory=True, num_workers=16)
 
     # Initialize MLP Model
     output_size = 1
-    input_size = (3 * 2) + args.latent_dim + 2  # start, goal, current, g_normalized, h_normalized
+    input_size = (3 * 3) + args.latent_dim + 2  # start, goal, current, g_normalized, h_normalized
     print(f"Calculated input size for MLP: {input_size}")
     model = MLPModel(input_size, output_size).to(device)
 
@@ -314,20 +408,23 @@ def main():
 
     # Train the MLP Model
     trained_model = train_model(
-        model,
-        train_loader,
-        val_loader,
-        device,
+        model,               # Your initialized model
+        train_loader,        # Your training DataLoader
+        val_loader,          # Your validation DataLoader
+        device,              # 'cuda' or 'cpu'
         epochs=args.epochs,
         lr=args.lr,
+        patience=args.patience,
         model_path=args.model_save_path,
         loss_fn=args.loss_function,
-        criterion=None,  # Let train_model handle setting the criterion
-        lambda_schedules=lambda_schedules,
+        criterion=None,      # Let train_model handle setting the criterion
+        lambda_schedules=lambda_schedules,  # Your lambda schedules
         save_each_epoch=args.save_each_epoch,
-        save_dir=args.save_dir
+        save_dir=args.save_dir,
+        debug=True,          # Enable debugging
+        debug_batch=0,       # Specify which batch to debug (e.g., first batch)
+        num_debug_samples=5  # Number of samples to print
     )
-
     print(f"Training completed. Best model saved as {args.model_save_path}")
 
 if __name__ == '__main__':

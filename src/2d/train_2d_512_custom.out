@@ -1,0 +1,72 @@
+Using device: cuda
+Loaded normalization values from /home/julius/Desktop/icra_phai/src/2d/normalization_values_comp/vanilla_normalization_values.pkl
+Loaded dataset from /home/julius/Desktop/icra_phai/src/2d/datasets_comp/dataset_vanilla.pkl
+Training samples: 9978256, Validation samples: 2494564
+Calculated input size for MLP: 1032
+Training MLPModel with learning type: priority
+Training model with loss function: custom
+/home/julius/.local/lib/python3.8/site-packages/torch/autograd/graph.py:769: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at ../aten/src/ATen/cuda/CublasHandlePool.cpp:135.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Epoch: 1/30, Train Loss: 0.004325, MSE Loss: 0.004322, Grad1 Loss: 0.000040, Grad2 Loss: 0.000019, Grad4 Loss: 0.000000, Val Loss: 0.002435, LR: 0.001
+    Current Lambdas: lambda1=0.0500, lambda2=0.0500, lambda3=0.0500
+Best model saved to 2d_512_vanilla_custom.pth
+Epoch: 2/30, Train Loss: 0.002868, MSE Loss: 0.002866, Grad1 Loss: 0.000023, Grad2 Loss: 0.000009, Grad4 Loss: 0.000000, Val Loss: 0.002330, LR: 0.001
+    Current Lambdas: lambda1=0.0511, lambda2=0.0511, lambda3=0.0505
+Best model saved to 2d_512_vanilla_custom.pth
+Epoch: 3/30, Train Loss: 0.002640, MSE Loss: 0.002639, Grad1 Loss: 0.000019, Grad2 Loss: 0.000008, Grad4 Loss: 0.000000, Val Loss: 0.002178, LR: 0.001
+    Current Lambdas: lambda1=0.0545, lambda2=0.0545, lambda3=0.0521
+Best model saved to 2d_512_vanilla_custom.pth
+Epoch: 4/30, Train Loss: 0.002495, MSE Loss: 0.002493, Grad1 Loss: 0.000016, Grad2 Loss: 0.000007, Grad4 Loss: 0.000000, Val Loss: 0.002368, LR: 0.001
+    Current Lambdas: lambda1=0.0602, lambda2=0.0602, lambda3=0.0548
+Epoch: 5/30, Train Loss: 0.002389, MSE Loss: 0.002388, Grad1 Loss: 0.000014, Grad2 Loss: 0.000006, Grad4 Loss: 0.000000, Val Loss: 0.002402, LR: 0.001
+    Current Lambdas: lambda1=0.0681, lambda2=0.0681, lambda3=0.0586
+Epoch: 6/30, Train Loss: 0.002305, MSE Loss: 0.002304, Grad1 Loss: 0.000012, Grad2 Loss: 0.000005, Grad4 Loss: 0.000000, Val Loss: 0.001678, LR: 0.001
+    Current Lambdas: lambda1=0.0782, lambda2=0.0782, lambda3=0.0634
+Best model saved to 2d_512_vanilla_custom.pth
+Epoch: 7/30, Train Loss: 0.002231, MSE Loss: 0.002230, Grad1 Loss: 0.000010, Grad2 Loss: 0.000005, Grad4 Loss: 0.000000, Val Loss: 0.002246, LR: 0.001
+    Current Lambdas: lambda1=0.0907, lambda2=0.0907, lambda3=0.0693
+Epoch: 8/30, Train Loss: 0.002166, MSE Loss: 0.002164, Grad1 Loss: 0.000009, Grad2 Loss: 0.000004, Grad4 Loss: 0.000000, Val Loss: 0.001835, LR: 0.001
+    Current Lambdas: lambda1=0.1054, lambda2=0.1054, lambda3=0.0762
+Epoch: 9/30, Train Loss: 0.002110, MSE Loss: 0.002108, Grad1 Loss: 0.000008, Grad2 Loss: 0.000004, Grad4 Loss: 0.000000, Val Loss: 0.001975, LR: 0.001
+    Current Lambdas: lambda1=0.1223, lambda2=0.1223, lambda3=0.0842
+Epoch: 10/30, Train Loss: 0.002060, MSE Loss: 0.002059, Grad1 Loss: 0.000007, Grad2 Loss: 0.000003, Grad4 Loss: 0.000000, Val Loss: 0.002067, LR: 0.001
+    Current Lambdas: lambda1=0.1415, lambda2=0.1415, lambda3=0.0933
+Epoch: 11/30, Train Loss: 0.002018, MSE Loss: 0.002016, Grad1 Loss: 0.000006, Grad2 Loss: 0.000003, Grad4 Loss: 0.000000, Val Loss: 0.002033, LR: 0.001
+    Current Lambdas: lambda1=0.1630, lambda2=0.1630, lambda3=0.1035
+Epoch: 12/30, Train Loss: 0.001980, MSE Loss: 0.001979, Grad1 Loss: 0.000005, Grad2 Loss: 0.000003, Grad4 Loss: 0.000000, Val Loss: 0.001996, LR: 0.001
+    Current Lambdas: lambda1=0.1867, lambda2=0.1867, lambda3=0.1147
+Epoch: 13/30, Train Loss: 0.001830, MSE Loss: 0.001829, Grad1 Loss: 0.000002, Grad2 Loss: 0.000002, Grad4 Loss: 0.000000, Val Loss: 0.002227, LR: 0.0005
+    Current Lambdas: lambda1=0.2127, lambda2=0.2127, lambda3=0.1271
+Epoch: 14/30, Train Loss: 0.001803, MSE Loss: 0.001802, Grad1 Loss: 0.000002, Grad2 Loss: 0.000002, Grad4 Loss: 0.000000, Val Loss: 0.002284, LR: 0.0005
+    Current Lambdas: lambda1=0.2409, lambda2=0.2409, lambda3=0.1404
+Epoch: 15/30, Train Loss: 0.001781, MSE Loss: 0.001780, Grad1 Loss: 0.000002, Grad2 Loss: 0.000002, Grad4 Loss: 0.000000, Val Loss: 0.001948, LR: 0.0005
+    Current Lambdas: lambda1=0.2714, lambda2=0.2714, lambda3=0.1549
+Epoch: 16/30, Train Loss: 0.001763, MSE Loss: 0.001762, Grad1 Loss: 0.000002, Grad2 Loss: 0.000002, Grad4 Loss: 0.000000, Val Loss: 0.001632, LR: 0.0005
+    Current Lambdas: lambda1=0.3042, lambda2=0.3042, lambda3=0.1704
+Best model saved to 2d_512_vanilla_custom.pth
+Epoch: 17/30, Train Loss: 0.001748, MSE Loss: 0.001747, Grad1 Loss: 0.000002, Grad2 Loss: 0.000002, Grad4 Loss: 0.000000, Val Loss: 0.001345, LR: 0.0005
+    Current Lambdas: lambda1=0.3392, lambda2=0.3392, lambda3=0.1870
+Best model saved to 2d_512_vanilla_custom.pth
+Epoch: 18/30, Train Loss: 0.001734, MSE Loss: 0.001733, Grad1 Loss: 0.000002, Grad2 Loss: 0.000002, Grad4 Loss: 0.000000, Val Loss: 0.001604, LR: 0.0005
+    Current Lambdas: lambda1=0.3765, lambda2=0.3765, lambda3=0.2046
+Epoch: 19/30, Train Loss: 0.001720, MSE Loss: 0.001719, Grad1 Loss: 0.000002, Grad2 Loss: 0.000002, Grad4 Loss: 0.000000, Val Loss: 0.001687, LR: 0.0005
+    Current Lambdas: lambda1=0.4160, lambda2=0.4160, lambda3=0.2234
+Epoch: 20/30, Train Loss: 0.001707, MSE Loss: 0.001706, Grad1 Loss: 0.000002, Grad2 Loss: 0.000002, Grad4 Loss: 0.000000, Val Loss: 0.001837, LR: 0.0005
+    Current Lambdas: lambda1=0.4578, lambda2=0.4578, lambda3=0.2432
+Epoch: 21/30, Train Loss: 0.001696, MSE Loss: 0.001695, Grad1 Loss: 0.000001, Grad2 Loss: 0.000002, Grad4 Loss: 0.000000, Val Loss: 0.002049, LR: 0.0005
+    Current Lambdas: lambda1=0.5018, lambda2=0.5018, lambda3=0.2640
+Epoch: 22/30, Train Loss: 0.001684, MSE Loss: 0.001683, Grad1 Loss: 0.000001, Grad2 Loss: 0.000002, Grad4 Loss: 0.000000, Val Loss: 0.001677, LR: 0.0005
+    Current Lambdas: lambda1=0.5482, lambda2=0.5482, lambda3=0.2860
+Epoch: 23/30, Train Loss: 0.001674, MSE Loss: 0.001672, Grad1 Loss: 0.000001, Grad2 Loss: 0.000002, Grad4 Loss: 0.000000, Val Loss: 0.001778, LR: 0.0005
+    Current Lambdas: lambda1=0.5967, lambda2=0.5967, lambda3=0.3090
+Epoch: 24/30, Train Loss: 0.001607, MSE Loss: 0.001606, Grad1 Loss: 0.000001, Grad2 Loss: 0.000001, Grad4 Loss: 0.000000, Val Loss: 0.001367, LR: 0.00025
+    Current Lambdas: lambda1=0.6476, lambda2=0.6476, lambda3=0.3331
+Epoch: 25/30, Train Loss: 0.001596, MSE Loss: 0.001595, Grad1 Loss: 0.000001, Grad2 Loss: 0.000001, Grad4 Loss: 0.000000, Val Loss: 0.001629, LR: 0.00025
+    Current Lambdas: lambda1=0.7007, lambda2=0.7007, lambda3=0.3582
+Epoch: 26/30, Train Loss: 0.001589, MSE Loss: 0.001587, Grad1 Loss: 0.000001, Grad2 Loss: 0.000001, Grad4 Loss: 0.000000, Val Loss: 0.001680, LR: 0.00025
+    Current Lambdas: lambda1=0.7560, lambda2=0.7560, lambda3=0.3844
+Epoch: 27/30, Train Loss: 0.001580, MSE Loss: 0.001579, Grad1 Loss: 0.000001, Grad2 Loss: 0.000001, Grad4 Loss: 0.000000, Val Loss: 0.001373, LR: 0.00025
+    Current Lambdas: lambda1=0.8136, lambda2=0.8136, lambda3=0.4117
+Early stopping triggered after 27 epochs.
+Best validation loss: 0.001345
+Training completed. Best model saved as 2d_512_vanilla_custom.pth

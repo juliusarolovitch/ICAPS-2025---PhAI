@@ -6,7 +6,6 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
-import argparse
 from tqdm import tqdm
 import torch.nn.functional as F
 import os  # For directory operations
@@ -24,20 +23,20 @@ class Room:
     children: list = field(default_factory=list)
 
 def generate_map(
-    width=256,  # Reduced from 1600 to 512
-    height=256,  # Reduced from 1600 to 512
-    min_room_size=40,  # Adjusted for smaller maps
-    max_room_size=50,  # Adjusted for smaller maps
+    width=512,  # Reduced from 1600 to 512
+    height=128,  # Reduced from 1600 to 512
+    min_room_size=60,  # Adjusted for smaller maps
+    max_room_size=100,  # Adjusted for smaller maps
     max_depth=10,  # Reduced depth for smaller maps
-    wall_thickness=4,
+    wall_thickness=3,
     min_openings=2,
     max_openings=3,
     min_opening_size=10,  # Adjusted for smaller maps
     max_opening_size=15,  # Adjusted for smaller maps
-    min_obstacles=1,
-    max_obstacles=2,
-    min_obstacle_size=6,
-    max_obstacle_size=8,
+    min_obstacles=2,
+    max_obstacles=4,
+    min_obstacle_size=10,
+    max_obstacle_size=15,
     obstacle_attempts=10,
     trap_probability=0.0
 ):
@@ -227,7 +226,7 @@ def generate_map(
         map_grid[y2:y2 + h2, x2:x2 + w2] = 1
 
         return True  # Successfully placed
-
+    
     def place_triangular_trap(room):
         """
         Places a triangular concave trap within the given room.
@@ -415,7 +414,7 @@ def pad_tensor(x, multiple):
 # ---------------------------
 
 class UNet2DAutoencoder(nn.Module):
-    def __init__(self, input_channels=1, latent_dim=1024):
+    def __init__(self, input_channels=1, latent_dim=512):  # Changed default latent_dim to 512
         super(UNet2DAutoencoder, self).__init__()
 
         self.latent_dim = latent_dim
@@ -436,18 +435,11 @@ class UNet2DAutoencoder(nn.Module):
             nn.ReLU(True)
         )
 
-        # Adjusted for 256x256 input size:
-        # After pooling, the feature map size is reduced to 8x8
-        self.flatten = nn.Flatten()
-        self.fc1 = nn.Linear(256 * 8 * 8, latent_dim)  # Changed from 256 * 16 * 16
-
-        # Decoder fully connected layer
-        self.fc2 = nn.Linear(latent_dim, 256 * 8 * 8)  # Changed from 256 * 16 * 16
-        self.unflatten = nn.Unflatten(1, (256, 8, 8))  # Changed from (256, 16, 16)
+        # Latent representation
+        self.conv_latent = nn.Conv2d(256, latent_dim, kernel_size=1)
 
         # Decoder
-        self.up5 = nn.ConvTranspose2d(256, 256, kernel_size=2, stride=2)
-        self.dec5 = self.conv_block(256, 256)
+        self.conv_decode = nn.Conv2d(latent_dim, 256, kernel_size=1)
 
         self.up4 = nn.ConvTranspose2d(256, 256, kernel_size=2, stride=2)
         self.dec4 = self.conv_block(256, 256)
@@ -483,21 +475,29 @@ class UNet2DAutoencoder(nn.Module):
 
         # Bottleneck
         b = self.bottleneck(F.max_pool2d(e4, 2))
-        b = F.max_pool2d(b, 2)  # Additional pooling to reduce size to 8x8
 
-        # Flatten and pass through fc1
-        b_flat = self.flatten(b)
-        latent_vector = self.fc1(b_flat)
-        return latent_vector
+        # Latent representation
+        latent = self.conv_latent(b)  # [batch_size, latent_dim, H, W]
 
-    def decode(self, latent_vector):
-        x = self.fc2(latent_vector)
-        x = self.unflatten(x)
+        # ---------------------------
+        # Added Global Average Pooling and Flattening
+        # ---------------------------
+        latent = F.adaptive_avg_pool2d(latent, (1, 1))  # [batch_size, latent_dim, 1, 1]
+        latent = latent.view(latent.size(0), -1)        # [batch_size, latent_dim]
 
-        d5 = self.up5(x)
-        d5 = self.dec5(d5)
+        return latent
 
-        d4 = self.up4(d5)
+    def decode(self, latent):
+        # ---------------------------
+        # Reshape latent vector back to [batch_size, latent_dim, 1, 1]
+        # ---------------------------
+        latent = latent.unsqueeze(2).unsqueeze(3)  # [batch_size, latent_dim, 1, 1]
+
+        # Decode from latent
+        x = self.conv_decode(latent)
+
+        # Decoder
+        d4 = self.up4(x)
         d4 = self.dec4(d4)
 
         d3 = self.up3(d4)
@@ -509,19 +509,14 @@ class UNet2DAutoencoder(nn.Module):
         d1 = self.up1(d2)
         d1 = self.dec1(d1)
 
+        # Final output
         out = self.final(d1)
         return torch.sigmoid(out)
 
     def forward(self, x):
-        latent_vector = self.encode(x)
-        reconstruction = self.decode(latent_vector)
+        latent = self.encode(x)        # [batch_size, latent_dim]
+        reconstruction = self.decode(latent)  # [batch_size, 1, H, W]
         return reconstruction
-
-    def get_latent_vector(self, x):
-        latent_vector = self.encode(x)
-        return latent_vector
-
-
 
 # ---------------------------
 # Loss Function
@@ -609,7 +604,7 @@ def visualize_reconstruction(model, dataset, device, num_samples=5, epoch=0):
 
             plt.tight_layout()
             # Create a directory for reconstructions if it doesn't exist
-            recon_dir = os.path.join('models', 'reconstructions')
+            recon_dir = os.path.join('models', 'reconstructions_xyt')
             os.makedirs(recon_dir, exist_ok=True)
             # Save the figure with epoch and sample index
             plt.savefig(os.path.join(recon_dir, f'unet_results_2D_epoch_{epoch}_sample_{idx}.png'))
@@ -661,7 +656,7 @@ def train(model, train_loader, val_loader, optimizer, device, epochs, patience, 
             best_val_loss = val_loss
             epochs_without_improvement = 0
             # Save the best model
-            best_model_path = os.path.join(models_dir, "unet_2d_best.pth")
+            best_model_path = os.path.join(models_dir, "unet_2d_xyt_best.pth")
             torch.save(model.state_dict(), best_model_path)
             print(f"Best model saved to {best_model_path}.")
         else:
@@ -680,7 +675,7 @@ def train(model, train_loader, val_loader, optimizer, device, epochs, patience, 
 # Main Function
 # ---------------------------
 
-def main(args):
+def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
@@ -691,7 +686,8 @@ def main(args):
     # Generate 2D maps
     print("Generating 2D maps...")
     maps = []
-    for _ in tqdm(range(args.num_maps), desc="Generating maps"):
+    num_maps = 10000  # Adjust as needed
+    for _ in tqdm(range(num_maps), desc="Generating maps"):
         map_ = generate_map()
         # Ensure the map has at least one occupied cell
         if np.any(map_):
@@ -702,77 +698,46 @@ def main(args):
         return
 
     # Split into training and validation sets
-    split_idx = int(len(maps) * args.train_split)
+    train_split = 0.8
+    split_idx = int(len(maps) * train_split)
     train_maps = maps[:split_idx]
     val_maps = maps[split_idx:]
 
     print(f"Total maps: {len(maps)}, Training: {len(train_maps)}, Validation: {len(val_maps)}")
 
     # Create datasets
-    train_dataset = Grid2DDataset(train_maps, augment=args.augment, pad=args.pad, multiple=args.pad_multiple)
-    val_dataset = Grid2DDataset(val_maps, augment=False, pad=args.pad, multiple=args.pad_multiple)
+    train_dataset = Grid2DDataset(train_maps, augment=False, pad=False, multiple=16)
+    val_dataset = Grid2DDataset(val_maps, augment=False, pad=False, multiple=16)
 
     print(f"Training samples: {len(train_dataset)}, Validation samples: {len(val_dataset)}")
 
     # Create data loaders
-    train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=16, drop_last=True)
-    val_loader = DataLoader(val_dataset, batch_size=args.batch_size, shuffle=False, num_workers=16, drop_last=False)
+    batch_size = 4
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4, drop_last=True)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=4, drop_last=False)
 
     # Initialize U-Net model and optimizer
-    model = UNet2DAutoencoder(input_channels=1, latent_dim=args.latent_dim).to(device)
-    optimizer = optim.Adam(model.parameters(), lr=args.learning_rate, weight_decay=1e-5)  # Added weight_decay for regularization
+    latent_dim = 512  # Adjust as needed
+    model = UNet2DAutoencoder(input_channels=1, latent_dim=latent_dim).to(device)
+    optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=1e-5)  # Added weight_decay for regularization
 
     # Start training with early stopping
-    best_val_loss = train(model, train_loader, val_loader, optimizer, device, args.epochs, args.patience, voxel_loss, models_dir, val_dataset)
+    epochs = 50  # Adjust as needed
+    patience = 5
+    best_val_loss = train(model, train_loader, val_loader, optimizer, device, epochs, patience, voxel_loss, models_dir, val_dataset)
 
     # Load the best model
-    best_model_path = os.path.join(models_dir, "unet_2d_best.pth")
+    best_model_path = os.path.join(models_dir, "unet_2d_xyt_best.pth")
     model.load_state_dict(torch.load(best_model_path))
     print(f"Best model loaded from {best_model_path}.")
 
     # Save the final model
-    final_model_path = os.path.join(models_dir, "unet_2d_final.pth")
+    final_model_path = os.path.join(models_dir, "unet_2d_xyt_final.pth")
     torch.save(model.state_dict(), final_model_path)
     print(f"Final model saved as {final_model_path}.")
 
     # Optional: Visualize some reconstructions
-    if args.visualize:
-        visualize_reconstruction(model, val_dataset, device, num_samples=args.num_samples, epoch='final')
-
-# ---------------------------
-# Argument Parser
-# ---------------------------
+    visualize_reconstruction(model, val_dataset, device, num_samples=5, epoch='final')
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Train 2D U-Net Autoencoder for Occupancy Grid Reconstruction")
-    parser.add_argument("--width", type=int, default=512, help="Width of the 2D map")  # Changed from 1600 to 512
-    parser.add_argument("--height", type=int, default=512, help="Height of the 2D map")  # Changed from 1600 to 512
-    parser.add_argument("--min_room_size", type=int, default=60, help="Minimum size of a room")  # Adjusted
-    parser.add_argument("--max_room_size", type=int, default=120, help="Maximum size of a room")  # Adjusted
-    parser.add_argument("--max_depth", type=int, default=5, help="Maximum recursion depth for splitting rooms")  # Adjusted
-    parser.add_argument("--wall_thickness", type=int, default=5, help="Thickness of the walls between rooms")
-    parser.add_argument("--min_openings", type=int, default=1, help="Minimum number of openings per wall")
-    parser.add_argument("--max_openings", type=int, default=2, help="Maximum number of openings per wall")
-    parser.add_argument("--min_opening_size", type=int, default=10, help="Minimum size of each opening in pixels")  # Adjusted
-    parser.add_argument("--max_opening_size", type=int, default=20, help="Maximum size of each opening in pixels")  # Adjusted
-    parser.add_argument("--min_obstacles", type=int, default=4, help="Minimum number of obstacles per room")
-    parser.add_argument("--max_obstacles", type=int, default=14, help="Maximum number of obstacles per room")
-    parser.add_argument("--min_obstacle_size", type=int, default=10, help="Minimum size of each obstacle")  # Adjusted
-    parser.add_argument("--max_obstacle_size", type=int, default=20, help="Maximum size of each obstacle")  # Adjusted
-    parser.add_argument("--obstacle_attempts", type=int, default=10, help="Number of attempts to place an obstacle without overlap")
-    parser.add_argument("--trap_probability", type=float, default=0.4, help="Probability of placing a concave trap instead of a regular obstacle")
-    parser.add_argument("--num_maps", type=int, default=512, help="Number of maps to generate for training")  # Reduced from 20000 to 512
-    parser.add_argument("--batch_size", type=int, default=4, help="Batch size for training")  # Increased from 1 to 4 for 512x512 maps
-    parser.add_argument("--learning_rate", type=float, default=0.001, help="Learning rate for the optimizer")
-    parser.add_argument("--epochs", type=int, default=100, help="Number of training epochs")
-    parser.add_argument("--latent_dim", type=int, default=1024, help="Dimensionality of the latent space")  # Changed from 512 to 1024
-    parser.add_argument("--train_split", type=float, default=0.8, help="Proportion of data for training")
-    parser.add_argument("--patience", type=int, default=10, help="Early stopping patience")
-    parser.add_argument("--visualize", action='store_true', help="Whether to visualize reconstructions after training")
-    parser.add_argument("--num_samples", type=int, default=5, help="Number of samples to visualize if --visualize is set")
-    parser.add_argument("--augment", action='store_true', help="Whether to apply data augmentation to training data")
-    parser.add_argument("--pad", action='store_true', help="Whether to pad the maps to the nearest multiple")
-    parser.add_argument("--pad_multiple", type=int, default=16, help="The multiple to pad to (default: 16)")
-    args = parser.parse_args()
-
-    main(args)
+    main()

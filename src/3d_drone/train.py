@@ -16,8 +16,16 @@ from dataclasses import dataclass, field
 # ---------------------------
 
 class FStarDataset(Dataset):
-    def __init__(self, data):
+    def __init__(self, data, map_dimensions):
+        """
+        Initializes the dataset.
+
+        Args:
+            data (list): List of data samples.
+            map_dimensions (tuple): Dimensions of the map as (depth, height, width).
+        """
         self.data = data
+        self.map_depth, self.map_height, self.map_width = map_dimensions
 
     def __len__(self):
         return len(self.data)
@@ -27,17 +35,17 @@ class FStarDataset(Dataset):
             # Unpack all seven elements from the dataset
             encoded_map, start, goal, current, g_normalized, h_normalized, target_value = self.data[idx]
 
-            # Normalize positional coordinates by dividing by 127 (assuming map size is 128x128)
-            start_normalized = np.array(start) / 127
-            goal_normalized = np.array(goal) / 127
-            current_normalized = np.array(current) / 127
+            # Normalize positional coordinates by dividing by respective map dimensions
+            start_normalized = np.array(start) / np.array([self.map_depth, self.map_height, self.map_width])
+            goal_normalized = np.array(goal) / np.array([self.map_depth, self.map_height, self.map_width])
+            current_normalized = np.array(current) / np.array([self.map_depth, self.map_height, self.map_width])
 
             # Concatenate all components to form the input tensor
             input_tensor = np.concatenate([
-                start_normalized,          # 2 elements
-                goal_normalized,           # 2 elements
-                current_normalized,        # 2 elements
-                encoded_map,
+                start_normalized,          # 3 elements
+                goal_normalized,           # 3 elements
+                current_normalized,        # 3 elements
+                encoded_map,               # latent_dim elements
                 [g_normalized, h_normalized],  # 2 elements
             ])
 
@@ -208,14 +216,13 @@ def train_model(model, train_loader, val_loader, device, epochs=100, lr=0.001, p
     print(f"Best validation loss: {best_val_loss:.6f}")
     return model
 
-
 # ---------------------------
 # Argument Parser
 # ---------------------------
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description="Train F* Prediction Model using a Generated Dataset")
+        description="Train F* Prediction Model using a Generated 3D Dataset")
     parser.add_argument("--dataset_path", type=str, required=True,
                         help="Path to the generated dataset pickle file")
     parser.add_argument("--norm_path", type=str, required=True,
@@ -226,7 +233,7 @@ def parse_arguments():
                         help="Number of epochs for training")
     parser.add_argument("--lr", type=float, default=0.001,
                         help="Learning rate")
-    parser.add_argument("--patience", type=int, default=5,
+    parser.add_argument("--patience", type=int, default=10,
                         help="Early stopping patience")
     parser.add_argument("--latent_dim", type=int, default=512,
                         help="Dimension for autoencoder vector")
@@ -245,6 +252,10 @@ def parse_arguments():
     parser.add_argument("--growth_rate", type=float, default=2.0, help="Growth rate for exponential increase of lambdas")
     parser.add_argument("--save_each_epoch", action='store_true', help="Save model at each epoch")
     parser.add_argument("--save_dir", type=str, default="models", help="Directory to save models at each epoch")
+    # New arguments for map dimensions (if needed)
+    parser.add_argument("--map_depth", type=int, default=40, help="Depth of the map")
+    parser.add_argument("--map_height", type=int, default=100, help="Height of the map")
+    parser.add_argument("--map_width", type=int, default=100, help="Width of the map")
     return parser.parse_args()
 
 # ---------------------------
@@ -273,7 +284,11 @@ def main():
         dataset = pickle.load(f)
     print(f"Loaded dataset from {args.dataset_path}")
 
-    full_dataset = FStarDataset(dataset)
+    # Assuming map dimensions are consistent across the dataset
+    # If map dimensions vary, you need to handle them accordingly
+    map_dimensions = (args.map_depth, args.map_height, args.map_width)
+
+    full_dataset = FStarDataset(dataset, map_dimensions)
 
     # Split into training and validation sets
     train_size = int(0.8 * len(full_dataset))
@@ -291,7 +306,7 @@ def main():
 
     # Initialize MLP Model
     output_size = 1
-    input_size = (3 * 2) + args.latent_dim + 2  # start, goal, current, g_normalized, h_normalized
+    input_size = (3 * 3) + args.latent_dim + 2  # start, goal, current (3D each), g_normalized, h_normalized
     print(f"Calculated input size for MLP: {input_size}")
     model = MLPModel(input_size, output_size).to(device)
 

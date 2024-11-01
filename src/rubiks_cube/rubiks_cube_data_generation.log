@@ -1,0 +1,310 @@
+2024-10-31 18:22:37,682 - INFO - Generating 100 Rubik's Cubes and collecting data.
+2024-10-31 18:22:37,682 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,682 - ERROR - Test Failed: Solved cube string does not match expected Kociemba format.
+2024-10-31 18:22:37,683 - ERROR - Expected: UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB
+2024-10-31 18:22:37,683 - ERROR - Got:      None
+2024-10-31 18:22:37,815 - INFO - Starting multiprocessing pool with 40 processes.
+2024-10-31 18:22:37,824 - INFO - Cube 1: Scramble sequence saved.
+2024-10-31 18:22:37,824 - INFO - Cube 2: Scramble sequence saved.
+2024-10-31 18:22:37,824 - INFO - Cube 5: Scramble sequence saved.
+2024-10-31 18:22:37,824 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,825 - WARNING - Cube 1: Invalid cube string after scramble.
+2024-10-31 18:22:37,825 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,825 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,825 - WARNING - Cube 5: Invalid cube string after scramble.
+2024-10-31 18:22:37,824 - INFO - Cube 7: Scramble sequence saved.
+2024-10-31 18:22:37,825 - WARNING - Cube 2: Invalid cube string after scramble.
+2024-10-31 18:22:37,825 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,825 - WARNING - Cube 7: Invalid cube string after scramble.
+2024-10-31 18:22:37,825 - INFO - Cube 3: Scramble sequence saved.
+2024-10-31 18:22:37,825 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,825 - WARNING - Cube 3: Invalid cube string after scramble.
+2024-10-31 18:22:37,825 - INFO - Cube 19: Scramble sequence saved.
+2024-10-31 18:22:37,825 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,825 - WARNING - Cube 19: Invalid cube string after scramble.
+2024-10-31 18:22:37,825 - INFO - Cube 16: Scramble sequence saved.
+2024-10-31 18:22:37,825 - INFO - Cube 4: Scramble sequence saved.
+2024-10-31 18:22:37,826 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,826 - WARNING - Cube 16: Invalid cube string after scramble.
+2024-10-31 18:22:37,826 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,826 - WARNING - Cube 4: Invalid cube string after scramble.
+2024-10-31 18:22:37,826 - INFO - Cube 24: Scramble sequence saved.
+2024-10-31 18:22:37,826 - INFO - Cube 26: Scramble sequence saved.
+2024-10-31 18:22:37,826 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,826 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,826 - WARNING - Cube 24: Invalid cube string after scramble.
+2024-10-31 18:22:37,826 - WARNING - Cube 26: Invalid cube string after scramble.
+2024-10-31 18:22:37,826 - INFO - Cube 27: Scramble sequence saved.
+2024-10-31 18:22:37,826 - INFO - Cube 13: Scramble sequence saved.
+2024-10-31 18:22:37,826 - INFO - Cube 11: Scramble sequence saved.
+2024-10-31 18:22:37,827 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,827 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,827 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,827 - WARNING - Cube 13: Invalid cube string after scramble.
+2024-10-31 18:22:37,826 - INFO - Cube 6: Scramble sequence saved.
+2024-10-31 18:22:37,827 - WARNING - Cube 11: Invalid cube string after scramble.
+2024-10-31 18:22:37,827 - INFO - Cube 36: Scramble sequence saved.
+2024-10-31 18:22:37,827 - WARNING - Cube 27: Invalid cube string after scramble.
+2024-10-31 18:22:37,827 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,827 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,827 - WARNING - Cube 36: Invalid cube string after scramble.
+2024-10-31 18:22:37,827 - WARNING - Cube 6: Invalid cube string after scramble.
+2024-10-31 18:22:37,828 - INFO - Cube 14: Scramble sequence saved.
+2024-10-31 18:22:37,828 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,828 - WARNING - Cube 14: Invalid cube string after scramble.
+2024-10-31 18:22:37,830 - INFO - Cube 23: Scramble sequence saved.
+2024-10-31 18:22:37,830 - INFO - Cube 25: Scramble sequence saved.
+2024-10-31 18:22:37,830 - INFO - Cube 33: Scramble sequence saved.
+2024-10-31 18:22:37,830 - INFO - Cube 28: Scramble sequence saved.
+2024-10-31 18:22:37,830 - INFO - Cube 10: Scramble sequence saved.
+2024-10-31 18:22:37,830 - INFO - Cube 15: Scramble sequence saved.
+2024-10-31 18:22:37,830 - INFO - Cube 17: Scramble sequence saved.
+2024-10-31 18:22:37,830 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,830 - INFO - Cube 34: Scramble sequence saved.
+2024-10-31 18:22:37,830 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,830 - WARNING - Cube 23: Invalid cube string after scramble.
+2024-10-31 18:22:37,830 - WARNING - Cube 25: Invalid cube string after scramble.
+2024-10-31 18:22:37,830 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,830 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,830 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,830 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,830 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,830 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,830 - WARNING - Cube 28: Invalid cube string after scramble.
+2024-10-31 18:22:37,830 - WARNING - Cube 33: Invalid cube string after scramble.
+2024-10-31 18:22:37,830 - WARNING - Cube 17: Invalid cube string after scramble.
+2024-10-31 18:22:37,830 - WARNING - Cube 10: Invalid cube string after scramble.
+2024-10-31 18:22:37,830 - WARNING - Cube 34: Invalid cube string after scramble.
+2024-10-31 18:22:37,830 - WARNING - Cube 15: Invalid cube string after scramble.
+2024-10-31 18:22:37,830 - INFO - Cube 29: Scramble sequence saved.
+2024-10-31 18:22:37,830 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,830 - WARNING - Cube 29: Invalid cube string after scramble.
+2024-10-31 18:22:37,830 - INFO - Cube 37: Scramble sequence saved.
+2024-10-31 18:22:37,831 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,831 - INFO - Cube 45: Scramble sequence saved.
+2024-10-31 18:22:37,830 - INFO - Cube 21: Scramble sequence saved.
+2024-10-31 18:22:37,831 - WARNING - Cube 37: Invalid cube string after scramble.
+2024-10-31 18:22:37,831 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,831 - WARNING - Cube 45: Invalid cube string after scramble.
+2024-10-31 18:22:37,831 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,831 - INFO - Cube 31: Scramble sequence saved.
+2024-10-31 18:22:37,831 - WARNING - Cube 21: Invalid cube string after scramble.
+2024-10-31 18:22:37,831 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,831 - WARNING - Cube 31: Invalid cube string after scramble.
+2024-10-31 18:22:37,831 - INFO - Cube 8: Scramble sequence saved.
+2024-10-31 18:22:37,831 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,831 - INFO - Cube 38: Scramble sequence saved.
+2024-10-31 18:22:37,831 - WARNING - Cube 8: Invalid cube string after scramble.
+2024-10-31 18:22:37,831 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,831 - WARNING - Cube 38: Invalid cube string after scramble.
+2024-10-31 18:22:37,831 - INFO - Cube 42: Scramble sequence saved.
+2024-10-31 18:22:37,831 - INFO - Cube 39: Scramble sequence saved.
+2024-10-31 18:22:37,831 - INFO - Cube 12: Scramble sequence saved.
+2024-10-31 18:22:37,832 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,832 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,832 - WARNING - Cube 39: Invalid cube string after scramble.
+2024-10-31 18:22:37,832 - WARNING - Cube 42: Invalid cube string after scramble.
+2024-10-31 18:22:37,832 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,832 - INFO - Cube 50: Scramble sequence saved.
+2024-10-31 18:22:37,832 - WARNING - Cube 12: Invalid cube string after scramble.
+2024-10-31 18:22:37,832 - INFO - Cube 49: Scramble sequence saved.
+2024-10-31 18:22:37,832 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,832 - WARNING - Cube 50: Invalid cube string after scramble.
+2024-10-31 18:22:37,832 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,832 - WARNING - Cube 49: Invalid cube string after scramble.
+2024-10-31 18:22:37,832 - INFO - Cube 41: Scramble sequence saved.
+2024-10-31 18:22:37,832 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,832 - WARNING - Cube 41: Invalid cube string after scramble.
+2024-10-31 18:22:37,833 - INFO - Cube 48: Scramble sequence saved.
+2024-10-31 18:22:37,833 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,833 - WARNING - Cube 48: Invalid cube string after scramble.
+2024-10-31 18:22:37,833 - INFO - Cube 40: Scramble sequence saved.
+2024-10-31 18:22:37,833 - INFO - Cube 32: Scramble sequence saved.
+2024-10-31 18:22:37,833 - INFO - Cube 53: Scramble sequence saved.
+2024-10-31 18:22:37,833 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,833 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,833 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,833 - WARNING - Cube 40: Invalid cube string after scramble.
+2024-10-31 18:22:37,833 - WARNING - Cube 53: Invalid cube string after scramble.
+2024-10-31 18:22:37,833 - INFO - Cube 46: Scramble sequence saved.
+2024-10-31 18:22:37,833 - WARNING - Cube 32: Invalid cube string after scramble.
+2024-10-31 18:22:37,833 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,833 - WARNING - Cube 46: Invalid cube string after scramble.
+2024-10-31 18:22:37,833 - INFO - Cube 9: Scramble sequence saved.
+2024-10-31 18:22:37,834 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,834 - INFO - Cube 20: Scramble sequence saved.
+2024-10-31 18:22:37,834 - WARNING - Cube 9: Invalid cube string after scramble.
+2024-10-31 18:22:37,834 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,834 - WARNING - Cube 20: Invalid cube string after scramble.
+2024-10-31 18:22:37,834 - INFO - Cube 47: Scramble sequence saved.
+2024-10-31 18:22:37,834 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,834 - WARNING - Cube 47: Invalid cube string after scramble.
+2024-10-31 18:22:37,835 - INFO - Cube 44: Scramble sequence saved.
+2024-10-31 18:22:37,835 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,835 - WARNING - Cube 44: Invalid cube string after scramble.
+2024-10-31 18:22:37,836 - INFO - Cube 59: Scramble sequence saved.
+2024-10-31 18:22:37,836 - INFO - Cube 51: Scramble sequence saved.
+2024-10-31 18:22:37,836 - INFO - Cube 22: Scramble sequence saved.
+2024-10-31 18:22:37,836 - INFO - Cube 54: Scramble sequence saved.
+2024-10-31 18:22:37,836 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,836 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,836 - WARNING - Cube 59: Invalid cube string after scramble.
+2024-10-31 18:22:37,836 - WARNING - Cube 51: Invalid cube string after scramble.
+2024-10-31 18:22:37,836 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,836 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,836 - WARNING - Cube 54: Invalid cube string after scramble.
+2024-10-31 18:22:37,836 - WARNING - Cube 22: Invalid cube string after scramble.
+2024-10-31 18:22:37,836 - INFO - Cube 65: Scramble sequence saved.
+2024-10-31 18:22:37,836 - INFO - Cube 18: Scramble sequence saved.
+2024-10-31 18:22:37,836 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,836 - WARNING - Cube 65: Invalid cube string after scramble.
+2024-10-31 18:22:37,836 - INFO - Cube 52: Scramble sequence saved.
+2024-10-31 18:22:37,836 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,836 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,836 - WARNING - Cube 52: Invalid cube string after scramble.
+2024-10-31 18:22:37,836 - WARNING - Cube 18: Invalid cube string after scramble.
+2024-10-31 18:22:37,837 - INFO - Cube 64: Scramble sequence saved.
+2024-10-31 18:22:37,837 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,837 - WARNING - Cube 64: Invalid cube string after scramble.
+2024-10-31 18:22:37,837 - INFO - Cube 68: Scramble sequence saved.
+2024-10-31 18:22:37,837 - INFO - Cube 73: Scramble sequence saved.
+2024-10-31 18:22:37,837 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,837 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,837 - WARNING - Cube 68: Invalid cube string after scramble.
+2024-10-31 18:22:37,837 - WARNING - Cube 73: Invalid cube string after scramble.
+2024-10-31 18:22:37,837 - INFO - Cube 35: Scramble sequence saved.
+2024-10-31 18:22:37,837 - INFO - Cube 57: Scramble sequence saved.
+2024-10-31 18:22:37,837 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,837 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,838 - WARNING - Cube 57: Invalid cube string after scramble.
+2024-10-31 18:22:37,838 - WARNING - Cube 35: Invalid cube string after scramble.
+2024-10-31 18:22:37,838 - INFO - Cube 58: Scramble sequence saved.
+2024-10-31 18:22:37,838 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,838 - WARNING - Cube 58: Invalid cube string after scramble.
+2024-10-31 18:22:37,838 - INFO - Cube 30: Scramble sequence saved.
+2024-10-31 18:22:37,838 - INFO - Cube 43: Scramble sequence saved.
+2024-10-31 18:22:37,838 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,838 - WARNING - Cube 30: Invalid cube string after scramble.
+2024-10-31 18:22:37,838 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,838 - WARNING - Cube 43: Invalid cube string after scramble.
+2024-10-31 18:22:37,838 - INFO - Cube 74: Scramble sequence saved.
+2024-10-31 18:22:37,838 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,839 - WARNING - Cube 74: Invalid cube string after scramble.
+2024-10-31 18:22:37,839 - INFO - Cube 71: Scramble sequence saved.
+2024-10-31 18:22:37,839 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,839 - WARNING - Cube 71: Invalid cube string after scramble.
+2024-10-31 18:22:37,839 - INFO - Cube 72: Scramble sequence saved.
+2024-10-31 18:22:37,839 - INFO - Cube 78: Scramble sequence saved.
+2024-10-31 18:22:37,839 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,839 - WARNING - Cube 72: Invalid cube string after scramble.
+2024-10-31 18:22:37,839 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,839 - WARNING - Cube 78: Invalid cube string after scramble.
+2024-10-31 18:22:37,839 - INFO - Cube 66: Scramble sequence saved.
+2024-10-31 18:22:37,840 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,840 - WARNING - Cube 66: Invalid cube string after scramble.
+2024-10-31 18:22:37,840 - INFO - Cube 80: Scramble sequence saved.
+2024-10-31 18:22:37,840 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,840 - WARNING - Cube 80: Invalid cube string after scramble.
+2024-10-31 18:22:37,840 - INFO - Cube 76: Scramble sequence saved.
+2024-10-31 18:22:37,840 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,840 - WARNING - Cube 76: Invalid cube string after scramble.
+2024-10-31 18:22:37,840 - INFO - Cube 60: Scramble sequence saved.
+2024-10-31 18:22:37,841 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,841 - WARNING - Cube 60: Invalid cube string after scramble.
+2024-10-31 18:22:37,841 - INFO - Cube 77: Scramble sequence saved.
+2024-10-31 18:22:37,841 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,841 - WARNING - Cube 77: Invalid cube string after scramble.
+2024-10-31 18:22:37,842 - INFO - Cube 56: Scramble sequence saved.
+2024-10-31 18:22:37,842 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,842 - WARNING - Cube 56: Invalid cube string after scramble.
+2024-10-31 18:22:37,842 - INFO - Cube 89: Scramble sequence saved.
+2024-10-31 18:22:37,842 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,842 - WARNING - Cube 89: Invalid cube string after scramble.
+2024-10-31 18:22:37,843 - INFO - Cube 85: Scramble sequence saved.
+2024-10-31 18:22:37,843 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,843 - WARNING - Cube 85: Invalid cube string after scramble.
+2024-10-31 18:22:37,843 - INFO - Cube 55: Scramble sequence saved.
+2024-10-31 18:22:37,843 - INFO - Cube 86: Scramble sequence saved.
+2024-10-31 18:22:37,843 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,843 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,843 - WARNING - Cube 86: Invalid cube string after scramble.
+2024-10-31 18:22:37,843 - INFO - Cube 96: Scramble sequence saved.
+2024-10-31 18:22:37,843 - WARNING - Cube 55: Invalid cube string after scramble.
+2024-10-31 18:22:37,843 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,844 - WARNING - Cube 96: Invalid cube string after scramble.
+2024-10-31 18:22:37,844 - INFO - Cube 79: Scramble sequence saved.
+2024-10-31 18:22:37,844 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,844 - WARNING - Cube 79: Invalid cube string after scramble.
+2024-10-31 18:22:37,844 - INFO - Cube 95: Scramble sequence saved.
+2024-10-31 18:22:37,844 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,844 - WARNING - Cube 95: Invalid cube string after scramble.
+2024-10-31 18:22:37,844 - INFO - Cube 88: Scramble sequence saved.
+2024-10-31 18:22:37,844 - INFO - Cube 81: Scramble sequence saved.
+2024-10-31 18:22:37,844 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,844 - WARNING - Cube 88: Invalid cube string after scramble.
+2024-10-31 18:22:37,844 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,844 - INFO - Cube 87: Scramble sequence saved.
+2024-10-31 18:22:37,844 - WARNING - Cube 81: Invalid cube string after scramble.
+2024-10-31 18:22:37,844 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,844 - INFO - Cube 92: Scramble sequence saved.
+2024-10-31 18:22:37,844 - WARNING - Cube 87: Invalid cube string after scramble.
+2024-10-31 18:22:37,844 - INFO - Cube 97: Scramble sequence saved.
+2024-10-31 18:22:37,844 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,844 - INFO - Cube 67: Scramble sequence saved.
+2024-10-31 18:22:37,844 - WARNING - Cube 92: Invalid cube string after scramble.
+2024-10-31 18:22:37,845 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,845 - WARNING - Cube 97: Invalid cube string after scramble.
+2024-10-31 18:22:37,845 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,845 - WARNING - Cube 67: Invalid cube string after scramble.
+2024-10-31 18:22:37,845 - INFO - Cube 82: Scramble sequence saved.
+2024-10-31 18:22:37,845 - ERROR - Unknown color '[R]' on face 'U'.
+2024-10-31 18:22:37,845 - WARNING - Cube 82: Invalid cube string after scramble.
+2024-10-31 18:22:37,845 - INFO - Cube 61: Scramble sequence saved.
+2024-10-31 18:22:37,845 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,845 - WARNING - Cube 61: Invalid cube string after scramble.
+2024-10-31 18:22:37,846 - INFO - Cube 84: Scramble sequence saved.
+2024-10-31 18:22:37,846 - INFO - Cube 100: Scramble sequence saved.
+2024-10-31 18:22:37,846 - INFO - Cube 93: Scramble sequence saved.
+2024-10-31 18:22:37,846 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,846 - INFO - Cube 94: Scramble sequence saved.
+2024-10-31 18:22:37,846 - WARNING - Cube 84: Invalid cube string after scramble.
+2024-10-31 18:22:37,846 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,846 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,846 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,846 - WARNING - Cube 93: Invalid cube string after scramble.
+2024-10-31 18:22:37,846 - WARNING - Cube 94: Invalid cube string after scramble.
+2024-10-31 18:22:37,846 - WARNING - Cube 100: Invalid cube string after scramble.
+2024-10-31 18:22:37,846 - INFO - Cube 62: Scramble sequence saved.
+2024-10-31 18:22:37,846 - INFO - Cube 91: Scramble sequence saved.
+2024-10-31 18:22:37,846 - INFO - Cube 83: Scramble sequence saved.
+2024-10-31 18:22:37,846 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,847 - WARNING - Cube 62: Invalid cube string after scramble.
+2024-10-31 18:22:37,847 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,847 - WARNING - Cube 91: Invalid cube string after scramble.
+2024-10-31 18:22:37,847 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,847 - WARNING - Cube 83: Invalid cube string after scramble.
+2024-10-31 18:22:37,848 - INFO - Cube 99: Scramble sequence saved.
+2024-10-31 18:22:37,848 - INFO - Cube 63: Scramble sequence saved.
+2024-10-31 18:22:37,848 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,848 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,848 - WARNING - Cube 99: Invalid cube string after scramble.
+2024-10-31 18:22:37,848 - WARNING - Cube 63: Invalid cube string after scramble.
+2024-10-31 18:22:37,848 - INFO - Cube 69: Scramble sequence saved.
+2024-10-31 18:22:37,848 - ERROR - Unknown color '[W]' on face 'U'.
+2024-10-31 18:22:37,848 - WARNING - Cube 69: Invalid cube string after scramble.
+2024-10-31 18:22:37,849 - INFO - Cube 70: Scramble sequence saved.
+2024-10-31 18:22:37,849 - ERROR - Unknown color '[B]' on face 'U'.
+2024-10-31 18:22:37,849 - WARNING - Cube 70: Invalid cube string after scramble.
+2024-10-31 18:22:37,849 - INFO - Cube 90: Scramble sequence saved.
+2024-10-31 18:22:37,849 - ERROR - Unknown color '[O]' on face 'U'.
+2024-10-31 18:22:37,849 - WARNING - Cube 90: Invalid cube string after scramble.
+2024-10-31 18:22:37,850 - INFO - Cube 75: Scramble sequence saved.
+2024-10-31 18:22:37,850 - ERROR - Unknown color '[Y]' on face 'U'.
+2024-10-31 18:22:37,850 - WARNING - Cube 75: Invalid cube string after scramble.
+2024-10-31 18:22:37,852 - INFO - Cube 98: Scramble sequence saved.
+2024-10-31 18:22:37,852 - ERROR - Unknown color '[G]' on face 'U'.
+2024-10-31 18:22:37,852 - WARNING - Cube 98: Invalid cube string after scramble.
+2024-10-31 18:22:37,853 - INFO - Multiprocessing pool completed.
+2024-10-31 18:22:37,866 - INFO - Collected data for 0 cubes.
+2024-10-31 18:22:37,866 - INFO - Dataset saved to datasets/rubiks_cube_dataset.pkl
+2024-10-31 18:22:37,867 - INFO - Dataset creation and saving completed.

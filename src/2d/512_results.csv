@@ -1,0 +1,10 @@
+Algorithm,Avg_Expansions_Reduction,Path_Cost_Percent_Increase,Path_Cost_Percent_STD,Avg_ReExpansions,Mean_ReExpansions_Percent,Optimal_Paths,Total_Queries
+Traditional A*,0,0,0,0,0,0,0
+Weighted A* ε=3.0,83.42,6.24,5.23,0.0,0.0,2,20
+Potential Search,67.17,6.81,6.22,650.5,14.22,3,20
+IMHA*,85.5,0.0,0.0,0.0,0.0,20,20
+SMHA*,85.53,0.0,0.0,0.0,0.0,20,20
+2D_512_MSE.pth A*,76.82,7.9,6.65,394.58,13.48,1,19
+2D_512_MSE.pth Focal A* ε=3.0,76.75,7.9,6.65,400.42,13.62,1,19
+2D_512_custom.pth A*,47.67,6.43,5.11,655.86,11.07,1,14
+2D_512_custom.pth Focal A* ε=3.0,46.74,6.43,5.11,724.43,12.04,1,14
