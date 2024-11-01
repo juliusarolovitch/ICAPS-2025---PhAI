@@ -1,17 +1,29 @@
-Algorithm,Puzzle_Size,Puzzles_Solved,Total_Puzzles,Success_Rate,Average_Solution_Cost,Solution_Cost_Percent_Difference,Average_Expansions,Expansion_Percent_Difference
-Traditional A*,48,100,100,100.00%,45.56,0.0%,12675.16,0.0%
-Weighted A* w=1.5,48,0,100,0.00%,0,-100.0%,0,-100.0%
-Weighted A* w=2.0,48,0,100,0.00%,0,-100.0%,0,-100.0%
-Weighted A* w=3.0,48,100,100,100.00%,62.14,36.39%,28680.78,126.28%
-IDA*,48,0,100,0.00%,0,-100.0%,0,-100.0%
-SMA*,48,0,100,0.00%,0,-100.0%,0,-100.0%
-Potential Search,48,100,100,100.00%,81.64,79.19%,7594.28,-40.09%
-Optimistic Search w=1.5,48,0,100,0.00%,0,-100.0%,0,-100.0%
-Optimistic Search w=2.0,48,0,100,0.00%,0,-100.0%,0,-100.0%
-Optimistic Search w=3.0,48,100,100,100.00%,45.56,0.0%,13228.94,4.37%
-IMHA*,48,100,100,100.00%,50.54,10.93%,13402.15,5.74%
-SMHA*,48,99,100,99.00%,52.26,14.71%,3726.56,-70.6%
-7x7_mse A*,48,100,100,100.00%,45.58,0.04%,13366.42,5.45%
-7x7_mse Focal A*,48,100,100,100.00%,45.58,0.04%,13300.16,4.93%
-7x7_custom A*,48,100,100,100.00%,45.58,0.04%,8830.67,-30.33%
-7x7_custom Focal A*,48,100,100,100.00%,45.58,0.04%,8780.26,-30.73%
+Algorithm,Puzzle_Size,Puzzles_Solved,Total_Puzzles,Success_Rate,Average_Solution_Cost,Solution_Cost_Percent_Difference,Average_Expansions,Expansion_Percent_Difference,Mean_ReExpansions_Percent
+Traditional A*,24,30,30,100.00%,43.4,0.0%,44274.8,0.0%,0.0%
+Weighted A* w=1.5 (Re-Expansions Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+Weighted A* w=1.5 (Re-Expansions Not Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+Weighted A* w=2.0 (Re-Expansions Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+Weighted A* w=2.0 (Re-Expansions Not Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+Weighted A* w=3.0 (Re-Expansions Allowed),24,30,30,100.00%,59.2,36.41%,4049.93,-90.85%,7.96%
+Weighted A* w=3.0 (Re-Expansions Not Allowed),24,30,30,100.00%,59.53,37.17%,2865.7,-93.53%,0.0%
+IDA*,24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+SMA*,24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+Potential Search (Re-Expansions Allowed),24,30,30,100.00%,67.4,55.3%,2725.87,-93.84%,6.84%
+Potential Search (Re-Expansions Not Allowed),24,30,30,100.00%,67.6,55.76%,2021.03,-95.44%,0.0%
+Optimistic Search w=1.5 (Re-Expansions Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+Optimistic Search w=1.5 (Re-Expansions Not Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+Optimistic Search w=2.0 (Re-Expansions Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+Optimistic Search w=2.0 (Re-Expansions Not Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+Optimistic Search w=3.0 (Re-Expansions Allowed),24,3,30,10.00%,48.67,12.14%,101265.33,128.72%,0.0%
+Optimistic Search w=3.0 (Re-Expansions Not Allowed),24,30,30,100.00%,58.87,35.64%,3017.47,-93.18%,0.0%
+IMHA* (Re-Expansions Allowed),24,30,30,100.00%,48.47,11.67%,2948.4,-93.34%,2.78%
+IMHA* (Re-Expansions Not Allowed),24,30,30,100.00%,48.6,11.98%,2517.77,-94.31%,0.0%
+SMHA*,24,30,30,100.00%,51.4,18.43%,1961.13,-95.57%,0.0%
+5x5_mse A*,24,30,30,100.00%,43.47,0.15%,20293.23,-54.17%,0.04%
+5x5_mse Focal A*,24,30,30,100.00%,43.47,0.15%,20294.57,-54.16%,0.04%
+5x5_mse Potential Search (Re-Expansions Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+5x5_mse Potential Search (Re-Expansions Not Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+5x5_custom A*,24,30,30,100.00%,43.4,0.0%,11463.33,-74.11%,0.08%
+5x5_custom Focal A*,24,30,30,100.00%,43.4,0.0%,11463.33,-74.11%,0.08%
+5x5_custom Potential Search (Re-Expansions Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+5x5_custom Potential Search (Re-Expansions Not Allowed),24,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%

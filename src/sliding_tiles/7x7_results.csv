@@ -1,0 +1,20 @@
+Algorithm,Puzzle_Size,Puzzles_Solved,Total_Puzzles,Success_Rate,Average_Solution_Cost,Solution_Cost_Percent_Difference,Average_Expansions,Expansion_Percent_Difference,Mean_ReExpansions_Percent
+Traditional A*,48,30,30,100.00%,44.53,0.0%,11505.83,0.0%,0.0%
+Weighted A* w=3.0 (Re-Expansions Allowed),48,29,30,96.67%,57.86,29.93%,2341.0,-79.65%,3.24%
+Weighted A* w=3.0 (Re-Expansions Not Allowed),48,30,30,100.00%,58.13,30.54%,2885.67,-74.92%,0.0%
+IDA*,48,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+SMA*,48,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+Potential Search (Re-Expansions Allowed),48,30,30,100.00%,63.4,42.37%,2613.93,-77.28%,5.37%
+Potential Search (Re-Expansions Not Allowed),48,30,30,100.00%,64.87,45.66%,2585.07,-77.53%,0.0%
+Optimistic Search w=3.0 (Re-Expansions Allowed),48,1,30,3.33%,51.0,14.52%,11686.0,1.57%,0.0%
+Optimistic Search w=3.0 (Re-Expansions Not Allowed),48,30,30,100.00%,58.53,31.44%,2826.47,-75.43%,0.0%
+IMHA*,48,29,30,96.67%,50.55,13.51%,2911.52,-74.7%,3.35%
+SMHA*,48,29,30,96.67%,52.48,17.85%,2513.93,-78.15%,0.0%
+7x7_mse A*,48,30,30,100.00%,44.53,0.0%,6527.6,-43.27%,0.09%
+7x7_mse Focal A*,48,30,30,100.00%,44.53,0.0%,6527.6,-43.27%,0.09%
+7x7_mse Potential Search (Re-Expansions Allowed),48,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+7x7_mse Potential Search (Re-Expansions Not Allowed),48,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+7x7_custom A*,48,30,30,100.00%,44.53,0.0%,5892.47,-48.79%,0.02%
+7x7_custom Focal A*,48,30,30,100.00%,44.53,0.0%,5892.47,-48.79%,0.02%
+7x7_custom Potential Search (Re-Expansions Allowed),48,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%
+7x7_custom Potential Search (Re-Expansions Not Allowed),48,0,30,0.00%,0,-100.0%,0,-100.0%,0.0%

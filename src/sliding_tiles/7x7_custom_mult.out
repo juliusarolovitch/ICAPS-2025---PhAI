@@ -1,38 +1,0 @@
-/home/julius/.local/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
-  warnings.warn(
-Using device: cuda
-Loaded normalization values from /home/julius/Desktop/icra_phai/src/sliding_tiles/normalization_values/mult_normalization_values_7x7.pkl
-Loaded dataset from /home/julius/Desktop/icra_phai/src/sliding_tiles/datasets/mult_dataset_7x7.pkl
-Training samples: 5831057, Validation samples: 1457765
-Calculated input size for MLP: 149
-Training MLPModel with learning type: priority
-Training model with loss function: custom
-Training Epochs:   0%|          | 0/30 [00:00<?, ?it/s]/home/julius/.local/lib/python3.8/site-packages/torch/autograd/graph.py:769: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at ../aten/src/ATen/cuda/CublasHandlePool.cpp:135.)
-  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
-Training Epochs:   3%|▎         | 1/30 [13:57<6:44:49, 837.58s/it]Epoch: 1/30, Train Loss: 0.091115, MSE Loss: 0.010576, Grad1 Loss: 0.000019, Grad2 Loss: 0.000001, Grad4 Loss: 1.610754, Val Loss: 0.011380, LR: 0.001000
-    Current Lambdas: lambda1=0.0500, lambda2=0.0500, lambda3=0.0500
-Best model saved to 7x7_custom_mult.pth
-Training Epochs:   7%|▋         | 2/30 [24:52<5:40:44, 730.16s/it]Epoch: 2/30, Train Loss: 0.163094, MSE Loss: 0.011369, Grad1 Loss: 0.000000, Grad2 Loss: 0.000001, Grad4 Loss: 2.000000, Val Loss: 0.011381, LR: 0.001000
-    Current Lambdas: lambda1=0.0759, lambda2=0.0759, lambda3=0.0759
-Training Epochs:  10%|█         | 3/30 [35:35<5:10:39, 690.35s/it]Epoch: 3/30, Train Loss: 0.214818, MSE Loss: 0.011370, Grad1 Loss: 0.000000, Grad2 Loss: 0.000001, Grad4 Loss: 2.000000, Val Loss: 0.011390, LR: 0.001000
-    Current Lambdas: lambda1=0.1017, lambda2=0.1017, lambda3=0.1017
-Training Epochs:  13%|█▎        | 4/30 [46:49<4:56:18, 683.78s/it]Epoch: 4/30, Train Loss: 0.266542, MSE Loss: 0.011370, Grad1 Loss: 0.000000, Grad2 Loss: 0.000001, Grad4 Loss: 2.000000, Val Loss: 0.011393, LR: 0.001000
-    Current Lambdas: lambda1=0.1276, lambda2=0.1276, lambda3=0.1276
-Training Epochs:  17%|█▋        | 5/30 [58:00<4:43:01, 679.27s/it]Epoch: 5/30, Train Loss: 0.318266, MSE Loss: 0.011370, Grad1 Loss: 0.000000, Grad2 Loss: 0.000001, Grad4 Loss: 2.000000, Val Loss: 0.011380, LR: 0.001000
-    Current Lambdas: lambda1=0.1534, lambda2=0.1534, lambda3=0.1534
-Training Epochs:  20%|██        | 6/30 [1:19:30<5:54:47, 886.97s/it]Epoch: 6/30, Train Loss: 0.369991, MSE Loss: 0.011370, Grad1 Loss: 0.000000, Grad2 Loss: 0.000001, Grad4 Loss: 2.000000, Val Loss: 0.011381, LR: 0.001000
-    Current Lambdas: lambda1=0.1793, lambda2=0.1793, lambda3=0.1793
-Training Epochs:  23%|██▎       | 7/30 [1:51:55<7:52:36, 1232.89s/it]Epoch: 7/30, Train Loss: 0.421714, MSE Loss: 0.011369, Grad1 Loss: 0.000000, Grad2 Loss: 0.000001, Grad4 Loss: 2.000000, Val Loss: 0.011380, LR: 0.001000
-    Current Lambdas: lambda1=0.2052, lambda2=0.2052, lambda3=0.2052
-Training Epochs:  27%|██▋       | 8/30 [2:24:15<8:54:32, 1457.85s/it]Epoch: 8/30, Train Loss: 0.473434, MSE Loss: 0.011365, Grad1 Loss: 0.000000, Grad2 Loss: 0.000001, Grad4 Loss: 2.000000, Val Loss: 0.011382, LR: 0.000500
-    Current Lambdas: lambda1=0.2310, lambda2=0.2310, lambda3=0.2310
-Training Epochs:  30%|███       | 9/30 [2:57:04<9:26:10, 1617.63s/it]Epoch: 9/30, Train Loss: 0.525158, MSE Loss: 0.011365, Grad1 Loss: 0.000000, Grad2 Loss: 0.000001, Grad4 Loss: 2.000000, Val Loss: 0.011381, LR: 0.000500
-    Current Lambdas: lambda1=0.2569, lambda2=0.2569, lambda3=0.2569
-Training Epochs:  33%|███▎      | 10/30 [3:29:08<9:30:46, 1712.33s/it]Epoch: 10/30, Train Loss: 0.576882, MSE Loss: 0.011365, Grad1 Loss: 0.000000, Grad2 Loss: 0.000001, Grad4 Loss: 2.000000, Val Loss: 0.011380, LR: 0.000500
-    Current Lambdas: lambda1=0.2828, lambda2=0.2828, lambda3=0.2828
-Training Epochs:  33%|███▎      | 10/30 [3:59:43<7:59:27, 1438.38s/it]
-Epoch: 11/30, Train Loss: 0.628607, MSE Loss: 0.011365, Grad1 Loss: 0.000000, Grad2 Loss: 0.000001, Grad4 Loss: 2.000000, Val Loss: 0.011392, LR: 0.000500
-    Current Lambdas: lambda1=0.3086, lambda2=0.3086, lambda3=0.3086
-Early stopping triggered after 11 epochs.
-Best validation loss: 0.011380
-Training completed. Best model saved as 7x7_custom_mult.pth

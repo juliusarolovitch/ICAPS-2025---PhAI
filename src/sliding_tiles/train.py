@@ -139,20 +139,15 @@ def custom_loss_function(all_inputs, output, target, lambda1=0.0, lambda2=0.0, l
         create_graph=True
     )[0]
     
-    # Assuming that g_normalized and h_normalized are at the end of the input tensor
     grad_g = grad_all_inputs[:, -2]  # g_normalized is second last element
     grad_h = grad_all_inputs[:, -1]  # h_normalized is last element
     
-    # Property 1: Ensure gradients are positive
     gradient_loss1 = torch.mean(F.relu(-grad_g)) + torch.mean(F.relu(-grad_h))
     
-    # Property 2: Gradient w.r.t h should be greater than gradient w.r.t g
-    gradient_loss2 = torch.mean(F.relu(grad_g - grad_h + 1e-6))  # Enforces grad_g ≤ grad_h
+    gradient_loss2 = torch.mean(F.relu(grad_g - grad_h)) 
     
-    # Property 4: Sum of gradients should be at least 2
-    gradient_loss4 = torch.mean(F.relu(2 - grad_g - grad_h))  # Enforces grad_g + grad_h ≥ 2
+    gradient_loss4 = torch.mean(F.relu(grad_g + grad_h - 2))
     
-    # Total loss combines MSE loss and penalties for violating properties
     total_loss = mse_loss + lambda1 * gradient_loss1 + lambda2 * gradient_loss2 + lambda3 * gradient_loss4
     return total_loss, mse_loss.item(), gradient_loss1.item(), gradient_loss2.item(), gradient_loss4.item()
 
@@ -342,12 +337,12 @@ def parse_arguments():
                         default="model.pth", help="Path to save the best model")
     parser.add_argument("--learning_type", type=str, choices=[
                         'heuristic', 'priority'], default='priority', help="Choose the type of function that is being learned.")
-    parser.add_argument("--lambda1_start", type=float, default=0.05, help="Starting value of lambda1")
-    parser.add_argument("--lambda1_end", type=float, default=.8, help="Ending value of lambda1")
-    parser.add_argument("--lambda2_start", type=float, default=0.05, help="Starting value of lambda2")
-    parser.add_argument("--lambda2_end", type=float, default=.8, help="Ending value of lambda2")
-    parser.add_argument("--lambda3_start", type=float, default=0.05, help="Starting value of lambda3")
-    parser.add_argument("--lambda3_end", type=float, default=.8, help="Ending value of lambda3")
+    parser.add_argument("--lambda1_start", type=float, default=1, help="Starting value of lambda1")
+    parser.add_argument("--lambda1_end", type=float, default=5, help="Ending value of lambda1")
+    parser.add_argument("--lambda2_start", type=float, default=1, help="Starting value of lambda2")
+    parser.add_argument("--lambda2_end", type=float, default=5, help="Ending value of lambda2")
+    parser.add_argument("--lambda3_start", type=float, default=1, help="Starting value of lambda3")
+    parser.add_argument("--lambda3_end", type=float, default=5, help="Ending value of lambda3")
     parser.add_argument("--growth_rate", type=float, default=1.0, help="Growth rate for exponential increase of lambdas")
     parser.add_argument("--save_each_epoch", action='store_true', help="Save model at each epoch")
     parser.add_argument("--save_dir", type=str, default="models", help="Directory to save models at each epoch")

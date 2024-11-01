@@ -2,14 +2,29 @@ import numpy as np
 import torch
 import random
 import heapq
-from tqdm import tqdm
 import argparse
 import os
 import pickle
 from dataclasses import dataclass, field
-from multiprocessing import Pool
+from multiprocessing import Pool, cpu_count
+import logging
+from tqdm import tqdm
 import signal
 import sys
+
+# ---------------------------
+# Logging Configuration
+# ---------------------------
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler()
+    ]
+)
+
+logger = logging.getLogger(__name__)
 
 # ---------------------------
 # Node Class for N-Puzzle
@@ -167,12 +182,10 @@ def astar(start_state, goal_state, grid_size=5):
     while open_list:
         current = heapq.heappop(open_list)
         num_expanded += 1  # Increment for each state popped from open_list
-        if num_expanded >= 2000000:
+        if num_expanded >= 100000:  # Prevent excessive expansions
             return None, num_expanded
 
         if current.state == goal_state:
-            # Return g_values and the number of states expanded
-            print(f"A* expanded {num_expanded} states")
             return g_values, num_expanded
 
         if current.state in closed_set:
@@ -208,33 +221,27 @@ def generate_start_goal(grid_size=5):
 # ---------------------------
 
 def process_single_puzzle(args):
-    (puzzle_idx, grid_size, puzzle_save_dir, track_expansions) = args
-    device = 'cpu'
-
+    (puzzle_idx, grid_size, puzzle_save_dir, track_expansions, max_samples) = args
     try:
         # Generate start and goal states
         start_state, goal_state = generate_start_goal(grid_size=grid_size)
 
-        # Save the puzzle data as .npz with grid size in filename
+        # Save the puzzle data as .npz
         puzzle_file_path = os.path.join(puzzle_save_dir, f"puzzle_{grid_size}x{grid_size}_{puzzle_idx+1}.npz")
         np.savez(puzzle_file_path, start_state=start_state, goal_state=goal_state)
+        logger.info(f"Puzzle {puzzle_idx + 1}: Start and goal states saved.")
 
         # Encode the start and goal states
-        with torch.no_grad():
-            # For simplicity, we flatten the state and convert it to a tensor
-            start_tensor = torch.tensor(start_state, dtype=torch.float32).unsqueeze(0).to(device)
-            goal_tensor = torch.tensor(goal_state, dtype=torch.float32).unsqueeze(0).to(device)
-            # If you have an encoder model, you can encode the states here
-            # For now, we'll use the raw state as the encoded representation
-            encoded_start = start_tensor.cpu().numpy().flatten()
-            encoded_goal = goal_tensor.cpu().numpy().flatten()
+        # Here, encoding is simply flattening the state. Replace with actual encoding if needed.
+        encoded_start = np.array(start_state, dtype=np.float32)
+        encoded_goal = np.array(goal_state, dtype=np.float32)
 
         # Run A* search from start to goal and from goal to start
         forward_g_values, forward_num_expanded = astar(start_state, goal_state, grid_size=grid_size)
         backward_g_values, backward_num_expanded = astar(goal_state, start_state, grid_size=grid_size)
 
         if forward_g_values is None or backward_g_values is None:
-            # Skip this puzzle if no solution is found
+            logger.warning(f"Puzzle {puzzle_idx + 1}: A* did not find a solution.")
             return None
 
         # Combine forward and backward g-values to compute f*
@@ -252,8 +259,7 @@ def process_single_puzzle(args):
         exp_f_star_values = {}
         c_star = forward_g_values[goal_state]  # Optimal path cost
         if c_star == 0:
-            # This should not happen as we ensured start_state != goal_state
-            # But adding a safeguard
+            logger.warning(f"Puzzle {puzzle_idx + 1}: c_star is zero, skipping penalties.")
             return None
 
         for state, f_star in f_star_values.items():
@@ -296,6 +302,7 @@ def process_single_puzzle(args):
         }
 
         for dataset_type, modified_f_star_values in f_star_versions.items():
+            sample_count = 0
             for state, f_star_value in modified_f_star_values.items():
                 if state == goal_state:
                     continue  # Skip the goal state to avoid c_star=0
@@ -309,23 +316,30 @@ def process_single_puzzle(args):
                 all_h_values[dataset_type].append(h)
                 all_f_star_values[dataset_type].append(f_star_value)
 
+                sample_count += 1
+                if sample_count >= max_samples:
+                    break  # Limit samples per query
+
+            logger.info(f"Puzzle {puzzle_idx + 1}: Collected {sample_count} samples for '{dataset_type}' dataset.")
+
         # Optionally, collect the number of states expanded
         total_expanded = forward_num_expanded + backward_num_expanded
 
         # Print the number of states expanded for this puzzle if tracking is enabled
         if track_expansions:
-            print(f"Puzzle {puzzle_idx + 1}: {total_expanded} states expanded")
+            logger.info(f"Puzzle {puzzle_idx + 1}: {total_expanded} states expanded.")
 
         return puzzle_data, all_g_values, all_h_values, all_f_star_values
+
     except Exception as e:
-        print(f"Error processing puzzle {puzzle_idx + 1}: {e}")
+        logger.error(f"Puzzle {puzzle_idx + 1}: Error during processing: {e}")
         return None
 
 # ---------------------------
 # Data Generation Function
 # ---------------------------
 
-def generate_dataset(num_puzzles, puzzle_save_dir="puzzles", grid_size=5, track_expansions=False):
+def generate_dataset(num_puzzles, puzzle_save_dir="puzzles", grid_size=5, track_expansions=False, max_samples=5000):
     # Initialize separate datasets
     datasets = {
         'vanilla': [],
@@ -350,22 +364,27 @@ def generate_dataset(num_puzzles, puzzle_save_dir="puzzles", grid_size=5, track_
 
     if not os.path.exists(puzzle_save_dir):
         os.makedirs(puzzle_save_dir)
+        logger.info(f"Created puzzle save directory: {puzzle_save_dir}")
 
     # Prepare arguments for multiprocessing
     args_list = []
     for puzzle_idx in range(num_puzzles):
-        args_list.append((puzzle_idx, grid_size, puzzle_save_dir, track_expansions))
-    # Remove init_worker and signal handling
-    with Pool(processes=40) as pool:
+        args_list.append((puzzle_idx, grid_size, puzzle_save_dir, track_expansions, max_samples))
+
+    # Initialize multiprocessing pool
+    pool_size = min(40, cpu_count())
+    with Pool(processes=pool_size) as pool:
         try:
-            results = list(tqdm(pool.imap_unordered(process_single_puzzle, args_list), total=num_puzzles))
+            logger.info(f"Starting multiprocessing pool with {pool_size} processes.")
+            results = list(tqdm(pool.imap_unordered(process_single_puzzle, args_list), total=num_puzzles, desc="Processing Puzzles"))
+            logger.info("Multiprocessing pool completed.")
         except KeyboardInterrupt:
-            print("Caught KeyboardInterrupt, terminating workers")
+            logger.warning("KeyboardInterrupt received. Terminating workers.")
             pool.terminate()
             pool.join()
             sys.exit(1)
         except Exception as e:
-            print(f"An exception occurred: {e}")
+            logger.error(f"An exception occurred during multiprocessing: {e}")
             pool.terminate()
             pool.join()
             sys.exit(1)
@@ -385,10 +404,10 @@ def generate_dataset(num_puzzles, puzzle_save_dir="puzzles", grid_size=5, track_
     normalization_values = {}
     for dataset_type in ['vanilla', 'exp', 'mult']:
         if not all_g_values[dataset_type]:  # Avoid empty datasets
-            print(f"No data collected for {dataset_type} dataset. Skipping normalization.")
+            logger.warning(f"No data collected for '{dataset_type}' dataset. Skipping normalization.")
             continue
 
-        print(f"Normalizing {dataset_type} dataset...")
+        logger.info(f"Normalizing '{dataset_type}' dataset...")
         g_min, g_max = np.min(all_g_values[dataset_type]), np.max(all_g_values[dataset_type])
         h_min, h_max = np.min(all_h_values[dataset_type]), np.max(all_h_values[dataset_type])
         f_star_min, f_star_max = np.min(all_f_star_values[dataset_type]), np.max(all_f_star_values[dataset_type])
@@ -400,7 +419,7 @@ def generate_dataset(num_puzzles, puzzle_save_dir="puzzles", grid_size=5, track_
         }
 
     for dataset_type in ['vanilla', 'exp', 'mult']:
-        dataset = datasets[dataset_type]
+        dataset = datasets.get(dataset_type, [])
         norm_values = normalization_values.get(dataset_type, {})
 
         if not dataset or not norm_values:
@@ -418,9 +437,11 @@ def generate_dataset(num_puzzles, puzzle_save_dir="puzzles", grid_size=5, track_
 
             if np.isfinite(g_normalized) and np.isfinite(h_normalized) and np.isfinite(target_normalized):
                 normalized_dataset.append(
-                    (encoded_start, encoded_goal, state, g_normalized, h_normalized, target_normalized))
+                    (encoded_start, encoded_goal, state, g_normalized, h_normalized, target_normalized)
+                )
 
         normalized_datasets[dataset_type] = normalized_dataset
+        logger.info(f"Normalized '{dataset_type}' dataset with {len(normalized_dataset)} samples.")
 
     return normalized_datasets, normalization_values
 
@@ -430,8 +451,9 @@ def generate_dataset(num_puzzles, puzzle_save_dir="puzzles", grid_size=5, track_
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description="Create Datasets for F* Prediction Model for N-Puzzle")
-    parser.add_argument("--num_puzzles", type=int, default=5,
+        description="Create Datasets for F* Prediction Model for N-Puzzle with Multiprocessing and Sample Limiting"
+    )
+    parser.add_argument("--num_puzzles", type=int, default=100,
                         help="Number of puzzles to generate")
     parser.add_argument("--grid_size", type=int, default=5,
                         help="Size of the puzzle grid (e.g., 5 for 5x5 puzzle)")
@@ -442,7 +464,9 @@ def parse_arguments():
     parser.add_argument("--norm_save_dir", type=str, default="normalization_values",
                         help="Directory to save the normalization values")
     parser.add_argument("--track_expansions", action='store_true',
-                        help="Enable tracking and printing of state expansions per puzzle")
+                        help="Enable tracking and logging of state expansions per puzzle")
+    parser.add_argument("--max_samples_per_puzzle", type=int, default=5000,
+                        help="Maximum number of samples to collect per puzzle")
     return parser.parse_args()
 
 # ---------------------------
@@ -452,19 +476,26 @@ def parse_arguments():
 def main():
     args = parse_arguments()
 
-    print(f"Generating {args.num_puzzles} puzzles of size {args.grid_size}x{args.grid_size} and calculating normalization values")
+    # Create necessary directories
+    directories = [
+        args.puzzle_save_dir,
+        args.save_dataset_dir,
+        args.norm_save_dir
+    ]
+    for dir_path in directories:
+        if not os.path.exists(dir_path):
+            os.makedirs(dir_path)
+            logger.info(f"Created directory: {dir_path}")
+
+    logger.info(f"Generating {args.num_puzzles} puzzles of size {args.grid_size}x{args.grid_size} and calculating normalization values")
 
     dataset_dict, normalization_values_dict = generate_dataset(
-        args.num_puzzles,
+        num_puzzles=args.num_puzzles,
         puzzle_save_dir=args.puzzle_save_dir,
         grid_size=args.grid_size,
-        track_expansions=args.track_expansions
+        track_expansions=args.track_expansions,
+        max_samples=args.max_samples_per_puzzle
     )
-
-    if not os.path.exists(args.save_dataset_dir):
-        os.makedirs(args.save_dataset_dir)
-    if not os.path.exists(args.norm_save_dir):
-        os.makedirs(args.norm_save_dir)
 
     # Include grid size in the filenames
     grid_size_str = f"{args.grid_size}x{args.grid_size}"
@@ -475,22 +506,30 @@ def main():
         normalization_values = normalization_values_dict.get(dataset_type, {})
 
         if not dataset:
-            print(f"No data to save for {dataset_type} dataset.")
+            logger.warning(f"No data to save for '{dataset_type}' dataset.")
             continue
 
         # Save dataset with grid size in filename
         dataset_save_path = os.path.join(args.save_dataset_dir, f"{dataset_type}_dataset_{grid_size_str}.pkl")
-        with open(dataset_save_path, 'wb') as f:
-            pickle.dump(dataset, f)
-        print(f"{dataset_type.capitalize()} dataset saved to {dataset_save_path}")
+        try:
+            with open(dataset_save_path, 'wb') as f:
+                pickle.dump(dataset, f, protocol=pickle.HIGHEST_PROTOCOL)
+            logger.info(f"'{dataset_type.capitalize()}' dataset saved to {dataset_save_path}")
+        except Exception as e:
+            logger.error(f"Failed to save '{dataset_type}' dataset: {e}")
+            continue
 
         # Save normalization values with grid size in filename
         norm_save_path = os.path.join(args.norm_save_dir, f"{dataset_type}_normalization_values_{grid_size_str}.pkl")
-        with open(norm_save_path, 'wb') as f:
-            pickle.dump(normalization_values, f)
-        print(f"{dataset_type.capitalize()} normalization values saved to {norm_save_path}")
+        try:
+            with open(norm_save_path, 'wb') as f:
+                pickle.dump(normalization_values, f, protocol=pickle.HIGHEST_PROTOCOL)
+            logger.info(f"'{dataset_type.capitalize()}' normalization values saved to {norm_save_path}")
+        except Exception as e:
+            logger.error(f"Failed to save '{dataset_type}' normalization values: {e}")
+            continue
 
-    print("All datasets created and saved successfully.")
+    logger.info("All datasets created and saved successfully.")
 
 if __name__ == '__main__':
     main()

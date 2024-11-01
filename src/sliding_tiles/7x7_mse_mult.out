@@ -1,28 +1,0 @@
-/home/julius/.local/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
-  warnings.warn(
-Using device: cuda
-Loaded normalization values from /home/julius/Desktop/icra_phai/src/sliding_tiles/normalization_values/mult_normalization_values_7x7.pkl
-Loaded dataset from /home/julius/Desktop/icra_phai/src/sliding_tiles/datasets/mult_dataset_7x7.pkl
-Training samples: 5831057, Validation samples: 1457765
-Calculated input size for MLP: 149
-Training MLPModel with learning type: priority
-Training model with loss function: mse
-Training Epochs:   0%|          | 0/30 [00:00<?, ?it/s]Training Epochs:   3%|▎         | 1/30 [10:01<4:50:33, 601.15s/it]Epoch: 1/30, Train Loss: 0.005836, MSE Loss: 0.005836, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004365, LR: 0.001000
-Best model saved to 7x7_mse_mult.pth
-Training Epochs:   7%|▋         | 2/30 [17:04<3:51:36, 496.29s/it]Epoch: 2/30, Train Loss: 0.004820, MSE Loss: 0.004820, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004826, LR: 0.001000
-Training Epochs:  10%|█         | 3/30 [24:19<3:30:44, 468.33s/it]Epoch: 3/30, Train Loss: 0.004699, MSE Loss: 0.004699, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004329, LR: 0.001000
-Best model saved to 7x7_mse_mult.pth
-Training Epochs:  13%|█▎        | 4/30 [31:23<3:15:28, 451.09s/it]Epoch: 4/30, Train Loss: 0.004643, MSE Loss: 0.004643, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004623, LR: 0.001000
-Training Epochs:  17%|█▋        | 5/30 [38:28<3:04:02, 441.70s/it]Epoch: 5/30, Train Loss: 0.004631, MSE Loss: 0.004631, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004713, LR: 0.001000
-Training Epochs:  20%|██        | 6/30 [46:00<2:57:58, 444.94s/it]Epoch: 6/30, Train Loss: 0.004604, MSE Loss: 0.004604, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004443, LR: 0.001000
-Training Epochs:  23%|██▎       | 7/30 [53:15<2:49:23, 441.89s/it]Epoch: 7/30, Train Loss: 0.004584, MSE Loss: 0.004584, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004520, LR: 0.001000
-Training Epochs:  27%|██▋       | 8/30 [1:00:18<2:39:50, 435.95s/it]Epoch: 8/30, Train Loss: 0.004566, MSE Loss: 0.004566, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004408, LR: 0.001000
-Training Epochs:  30%|███       | 9/30 [1:18:39<3:45:18, 643.72s/it]Epoch: 9/30, Train Loss: 0.004557, MSE Loss: 0.004557, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004386, LR: 0.001000
-Training Epochs:  33%|███▎      | 10/30 [1:47:55<5:29:02, 987.12s/it]Epoch: 10/30, Train Loss: 0.004432, MSE Loss: 0.004432, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004358, LR: 0.000500
-Training Epochs:  37%|███▋      | 11/30 [2:17:22<6:28:10, 1225.81s/it]Epoch: 11/30, Train Loss: 0.004431, MSE Loss: 0.004431, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004394, LR: 0.000500
-Training Epochs:  40%|████      | 12/30 [2:46:50<6:57:14, 1390.83s/it]Epoch: 12/30, Train Loss: 0.004432, MSE Loss: 0.004432, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.005863, LR: 0.000500
-Training Epochs:  40%|████      | 12/30 [3:16:13<4:54:19, 981.09s/it] 
-Epoch: 13/30, Train Loss: 0.004428, MSE Loss: 0.004428, Grad1 Loss: 0.000000, Grad2 Loss: 0.000000, Grad4 Loss: 0.000000, Val Loss: 0.004373, LR: 0.000500
-Early stopping triggered after 13 epochs.
-Best validation loss: 0.004329
-Training completed. Best model saved as 7x7_mse_mult.pth
